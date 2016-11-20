@@ -1,0 +1,42 @@
+mixin tabs(index)
+	- tabName = 'tabs-' + index
+	input(type="radio" id=tabName+"-1" name=tabName checked).tabs__input.tabs__input_1
+	label(for=tabName+"-1").tabs__title.tabs__title_ie Internet Explorer
+	
+	input(type="radio" id=tabName+"-2" name=tabName).tabs__input.tabs__input_2
+	label(for=tabName+"-2").tabs__title.tabs__title_ff Firefox
+	
+	input(type="radio" id=tabName+"-3" name=tabName).tabs__input.tabs__input_3
+	label(for=tabName+"-3").tabs__title.tabs__title_ch Chrome
+	
+	input(type="radio" id=tabName+"-4" name=tabName).tabs__input.tabs__input_4
+	label(for=tabName+"-4").tabs__title.tabs__title_sf Safari
+
+	.tabs__content.tabs__content_1
+		- if(index == 1)
+			ol
+				li In your browser's menu bar go to Tools → Internet Options → General → Browsing History → Delete...
+				li From this window delete the Temporary Internet Files.
+				li Close this window, then select OK before exiting the browser.
+		- else
+			ol
+				li In your browser's menu bar, click on "Tools."
+				li Click "Internet Options..."
+				li Under "Temporary Internet Files" on the General Tab, click "Delete Cookies."
+				li Click "Ok" on the dialog box that says, "Delete all cookies in the Temporary Internet Files Folder?"
+	.tabs__content.tabs__content_2
+		p Lorem ipsum dolor sit amet, consectetur adipisicing elit. Obcaecati ducimus iusto provident alias asperiores dolore, velit veritatis reiciendis nulla et quo optio aliquid earum voluptatem sunt omnis corporis nesciunt mollitia.
+	.tabs__content.tabs__content_3
+		ul
+			li In your browser's menu bar go to Tools → Internet Options → General → Browsing History → Delete...
+			li From this window delete the Temporary Internet Files.
+			li Close this window, then select OK before exiting the browser.
+	.tabs__content.tabs__content_4 
+		p Lorem ipsum dolor sit amet, consectetur adipisicing elit. Obcaecati ducimus iusto provident alias asperiores dolore, velit veritatis reiciendis nulla et quo optio aliquid earum voluptatem sunt omnis corporis nesciunt mollitia.
+
+
+mixin browser(item)
+	a(href="#").browser
+		img(src='img/'+item.icon, alt=item.name).browser__icon
+		span.browser__title= item.name
+		span.browser__version= item.version

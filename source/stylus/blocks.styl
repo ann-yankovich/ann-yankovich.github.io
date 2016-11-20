@@ -1,0 +1,276 @@
+.container
+	width $minWidth px
+	margin 0 auto
+	padding 0 10px
+
+.header
+	display flex
+	justify-content space-between
+	align-items flex-end
+	height $headerHeight px
+	background linear-gradient(to bottom, alpha(#fff, 0), alpha(#000, .3)), linear-gradient(135deg, darken($headerBg, 29%) 17%, transparent 17%) 0 0, linear-gradient(315deg, darken($headerBg, 29%) 17%, transparent 17%) -1px -3px, linear-gradient(225deg, lighten($headerBg, 5%) 17%, transparent 17%) -1px 1px, linear-gradient(45deg, lighten($headerBg, 5%) 17%, transparent 17%) 0 -2px, linear-gradient(135deg, darken($headerBg, 29%) 17%, transparent 17%) 1px 2px, linear-gradient(315deg, darken($headerBg, 29%) 17%, transparent 17%) 0 -1px, linear-gradient(135deg, lighten($headerBg, 5%) 17%, transparent 17%) 1px 3px, linear-gradient(315deg, lighten($headerBg, 5%) 17%, transparent 17%) 0 0
+	background-size 100% 100%, 2px 4px, 2px 4px, 2px 4px, 2px 4px, 2px 4px, 2px 4px, 2px 4px, 2px 4px
+	background-color $headerBg
+	&__langs
+		margin-left 45px
+	&__container
+		padding 0
+
+.menu
+	display inline-block
+	padding 0 20px
+	background url('data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABQAAAAUCAYAAACNiR0NAAAA4klEQVQ4T7WUsRGAIAxFQ5sRWAPXYA1dgzVkDdbQNRghrVaPInd20eYfAc3LTzBd16Xbthmac9Y5p9VadYyx4mMMrbWuNeeJP8+jKSVLEvykOafmnBdRa01bayYiKiK277v23g0CKmCfSojHE5LBZyql6H3fixByvIOYOJXEE57nqcdxGER+TRz1XvoK4wnxgC6hxCFmDSHzh3eciydkDsmE4o0nYv54z1cQT+jvKBnRrxtCJXSf78QT4gXqPaLrELHPjaGS/wjJRFe9p8TxCmK89X+deA/JTCYU0i/18/ubhy/zkHUkFwQMngAAAABJRU5ErkJggg=='), linear-gradient(to bottom, alpha(#fff, 0), alpha(#000, .2))
+	background-color $menuBg
+	border-radius 4px
+	box-shadow inset 0 1px 0 0 alpha(#fff, 0.05)
+	vertical-align bottom
+	&__item
+		display inline-block
+		padding 10px 19px
+		color $menuItemClr
+		font-family $menuFont
+		font-weight bold
+		text-decoration none
+		text-shadow 0 -1px 0 alpha(#000, .7)
+		transition()
+		vertical-align bottom
+		&:not(:first-child)
+			border-left 1px solid alpha(#fff, 0.05)
+		&:not(:last-child)
+			border-right 1px solid $menuItemBorderR
+		&::after
+			content ''
+			width 0
+		&:hover:not(.menu__item_active), &_active
+			position relative
+			box-shadow inset 0 0 15px 0 alpha(#000, 0.1)
+			&::after
+				position absolute
+				left 0
+				width 100%
+				height 3px
+				background linear-gradient(to bottom, alpha(#fff, 0.21), alpha(#000, 0))
+				transition()
+		&:hover:not(.menu__item_active)
+			background linear-gradient(to bottom, alpha(#fff, 0), alpha(#000, .15))
+			&::after
+				bottom 0
+				background-color $menuItemHover
+				box-shadow 0 -1px 1px 0 alpha(#000, 0.2)
+		&_active
+			background linear-gradient(to top, alpha(#fff, 0), alpha(#000, .15))
+			&::after
+				top 0
+				background-color $menuItemActive
+				box-shadow 0 1px 1px 0 alpha(#000, 0.2)
+
+.langs
+	display inline-block
+	vertical-align bottom
+	margin-bottom 10px
+	font-size 0
+	&__item
+		display inline-block
+		margin 0
+		padding 0 5px
+		vertical-align middle
+	&__link
+		display block
+		box-shadow 0 0 2px 0 alpha(#000, 0.5)
+		transition()
+		&_gb
+			sprite($s-flag_gb)
+		&_ru
+			sprite($s-flag_ru)
+		&_de
+			sprite($s-flag_de)
+		&_fr
+			sprite($s-flag_fr)
+		&:hover
+			box-shadow 0 0 2px 0 alpha(#fff, 0.5)
+			transform translateY(-20%)
+			filter saturate(2)
+
+.content
+	padding-top 40px
+	min-height 'calc(100% - %spx - %spx)' % ($footerHeight $headerHeight)
+
+.section
+	&_mbottom
+		margin-bottom 45px
+
+.title
+	&-s
+		margin-bottom 10px
+		font-size 14px
+		line-height 18px
+	&-m
+		font-family $titlesFont
+		font-size 24px
+		font-weight normal
+		line-height 30px
+	&-l
+		font-family $titlesFont
+		font-size 30px
+		font-weight bold
+		margin-bottom 30px
+	&_mbottom
+		margin-bottom 20px
+
+.notice
+	margin 0 auto
+	padding 10px
+	background $noticeBg
+	line-height 18px
+	max-width 500px
+	text-align center
+	&__title
+		font-weight bold
+
+.top-article
+	margin-bottom 45px
+	&__text, &__tabs
+		display inline-block
+		vertical-align top
+	&__text
+		width 300px
+		margin-right 28px
+		padding-top 18px
+	&__notice
+		position relative
+		background repeating-linear-gradient(135deg, $noticeBg 0, $noticeBg 24px, darken($noticeBg, 8%) 26px, darken($noticeBg, 8%) 35px, $noticeBg 37px)
+		border-radius 5px
+		box-shadow 0 0 5px 0 alpha(#000, 0.25)
+		left -10px
+		text-align left
+
+.tabs
+	font-size 0
+	&__content
+		display none
+		position relative
+		max-width 564px
+		padding 18px 45px 15px 20px
+		background linear-gradient(to bottom, $tabsBg, darken($tabsBg, 3%))
+		border-radius 5px
+		box-shadow 0 1px 2px 0 alpha(#000, .25)
+		font-size 14px
+		line-height 20px
+	&__input
+		display none
+		for $index in (1..4)
+			&_{$index}
+				&:checked
+					& ~ .tabs__content_{$index}
+						display block
+						if($index == 1)
+							border-top-left-radius 0
+		&:checked
+			+ .tabs
+				&__title
+					background $tabsBg
+					border-top-left-radius 5px
+					border-top-right-radius 5px
+					box-shadow 0 1px 2px 0 alpha(#000, .25)
+					border-right none
+					color $baseColor
+					font-weight bold
+					text-decoration none
+					&::after
+						opacity 0
+					&::before
+						filter grayscale(0%)
+					& + .tabs
+						&__input
+							& + .tabs
+								&__title
+									&::after
+										opacity 0
+	&__title
+		position relative
+		display inline-block
+		padding 10px 18px
+		color $linksColor
+		cursor pointer
+		font-size 15px
+		text-decoration underline
+		&:not(:first-of-type)::after, &::before
+			content ''
+			vertical-align text-bottom
+		&::before
+			display inline-block
+			margin-right 10px
+			filter grayscale(100%)
+			transition()
+		&_ie
+			&::before
+				sprite($s-logo_ie)
+		&_ff
+			&::before
+				sprite($s-logo_ff)
+		&_ch
+			&::before
+				sprite($s-logo_ch)
+		&_sf
+			&::before
+				sprite($s-logo_sf)
+		&::after
+			position absolute
+			left 0
+			bottom 10px
+			width 1px
+			height 12px
+			background-color alpha(#000, .15)
+		&:hover
+			color $baseColor
+			text-decoration none
+			&::before
+				filter grayscale(0%)
+
+.columns
+	display flex
+	margin 0 -10px
+	&__col
+		flex 1 0 auto
+		padding 0 10px
+		&_4
+			flex-basis 25%
+
+.browser
+	display block
+	margin 5px 0 25px
+	font-size 16px
+	text-align center
+	text-decoration none
+	&__icon
+		margin-bottom 24px
+		transition()
+	&__title
+		display block
+		margin-bottom 2px
+		color $linksColor
+		font-weight bold
+		text-decoration underline
+		transition()
+	&__version
+		color $descriptionText
+	&:hover
+		.browser
+			&__title
+				color $baseColor
+				text-decoration none
+			&__icon
+				transform scale(1.1)
+				filter saturate(1.5)
+
+.bottom-text
+	font-family $titlesFont
+	font-size 20px
+
+.footer
+	height $footerHeight px
+	font-family $footerFont
+	font-size 13px
+	&__container
+		padding 15px 10px 20px
+		border-top 1px solid $baseColor

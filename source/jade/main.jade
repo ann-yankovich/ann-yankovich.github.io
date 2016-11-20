@@ -1,0 +1,89 @@
+include helpers/variables
+include helpers/mixins
+
+doctype html
+html
+	head
+		title test
+		include inc/head
+	body.main
+		include partials/header
+
+		main.content
+
+			.container
+			
+				h1.title-l Browser Trouble
+			
+				section.section
+					article.top-article
+						h2.title-m Empty your browser’s cache
+						.top-article__text
+							p Clearing your browser’s cache can force recently changed web pages to show up properly. Each browser handles caching differently, so be sure to follow the correct steps for your particular browser.
+			
+							.notice.top-article__notice
+								span.notice__title Note: 
+								| If your browser version is not listed here, 
+								a(href="#") Google
+								|  has more comprehensive instructions covering older versions of these browsers.
+						
+						.tabs.top-article__tabs
+							+tabs(1)
+							
+					article.top-article
+						h2.title-m Remove stale cookies
+						.top-article__text
+							p A cookie is a piece of text stored by your browser to help it remember your login information, site preferences, and more. If you are having problems with one of our sites, deleting your cookies will reset your preferences to their default values.
+			
+							.notice.top-article__notice
+								span.notice__title Note: 
+								| On Firefox, Chrome, and Safari, it is possible to search for and delete only your 37signals cookies. On Internet Explorer you will have to delete all cookies.
+
+						.tabs.top-article__tabs
+							+tabs(2)
+			
+				section.section.section_mbottom
+					h2.title-m.title_mbottom Make sure your browser is up-to-date
+					p To get the most out of our products, we recommend keeping your browser up-to-date. Modern browsers typically render pages faster, support richer interactivity, and offer enhanced security to keep your data safe. Plus, knowing that you have a newer browser means we can spend less time squashing bugs and more time improving your experience. We support the following browsers:
+					
+					- var browsersList = [{ name: 'Internet Explorer', version: 'Version 8+', icon: 'ie.png' }, { name: 'Mozilla Firefox', version: 'Version 4+', icon: 'firefox.png' }, { name: 'Google Chrome', icon: 'chrome.png' }, { name: 'Apple Safari', version: 'Version 5+', icon: 'safari.png' } ]
+
+					.columns
+						- for browser in browsersList
+							.columns__col.columns__col_4.columns__col
+								+browser(browser)
+					
+					.notice.columns__notice
+						span.notice__title Please note: 
+						| We do not support Internet Explorer 6 or Opera. Please download one of the browsers above to continue using our products without hiccups.
+
+				section.section.section_mbottom
+					h2.title-m.title_mbottom Check your internet connection
+					.columns
+						.columns__col.columns__col_4
+							h3.title-s Can you access other major web sites?
+							p If you're having trouble accessing one of our sites, try visiting Google, Yahoo, or Apple before submitting a support request. If these sites fail, you may have a more serious connection issue — try our other connection tips to the right.
+							p Assuming those major sites show up fine, it's time to verify whether other people can access our products. To look into that, be sure to visit status.37signals.com or Down For Everyone Or Just Me.
+							p Just you? The best explaination could be a DNS issue. DNS servers figure out how internet domain names (like 37signals.com) map to server IP addresses. Try switching to Google Public DNS or Open DNS to see if that resolves the issue.
+						.columns__col.columns__col_4
+							h3.title-s Try another browser
+							p Extensions or other software may occasionally corrupt your browser, leading to unexpected behavior. Before making changes to your primary browser, try accessing the internet with another browser like Chrome or Firefox.
+							h3.title-s Check your anti-virus and firewall settings
+							p Still having issues no matter which browser you're using? Try disabling your anti-virus software — corrupt or partially-uninstalled software can break your access to the internet. Also try disabling your firewall temporarily to see if that helps.
+							p If you continue experiencing issues even with anti-virus and firewall disabled, it's time to check your connection to the network.
+						.columns__col.columns__col_4
+							h3.title-s On Wi-Fi? Make sure you're connected.
+							p Wireless hotspots are great, but they're not always reliable. If you're using wi-fi but having connection issues, start by verifying your connection to the base station. Are you connected to the base station you expect or did your computer pick up someone else's signal? Did you enter the correct password?
+							p If you're on the correct base station and the password checks out, try looking into your signal strength. If it's relatively weak, try moving closer to the hotspot and try accessing the web again.
+							p Good signal but still having issues? It may be time to restart the base station and try again in a few minutes.
+						.columns__col.columns__col_4
+							h3.title-s Restart your modem and your router.
+							p When all else fails, it's time to check the hardware that connects you to the internet in the first place. If you can access the modem and the router, you'll need to disconnect them from their power source (the power button often just puts them in standby).
+							p Once you've powered down the modem and router, wait 10-15 seconds, then plug the modem back in, followed by the router. Allow time for both to boot up and connect by watching the activity lights, then try connecting to the internet again on your computer.
+				
+				section.section.section_mbottom
+					p.bottom-text Still have questions? Submit a 
+						a(href="#") support request via email
+						|  We'll get back to you within a few hours.
+
+		include partials/footer

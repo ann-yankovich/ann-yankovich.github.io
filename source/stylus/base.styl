@@ -1,0 +1,34 @@
+*
+	margin 0
+	padding 0
+
+*,:after,:before,input[type=checkbox],input[type=radio]
+	box-sizing border-box
+
+html
+	height 100%
+	font-size $baseFontSize, false
+
+body
+	height 100%
+	background-image url('data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAADIAAAAyCAYAAAAeP4ixAAADH0lEQVRoQ93au3XrMBCEYSplCWrDbkNtyG2oDbsNtWG3oRKY+ka/g++ePczhhAcECIg7+5hZ+nK73fbn83lcr9f99Xodn5+f+8fHx9H95/O53263v/uv12u/Xq//jb+/v/f39/fjfr/vX19fR+Ouv7+/++VyOd7e3vafn5+/67Zt+7Ztf+td17hr6xv3uy/bIn+XLNab9oZdQ+TxeOyPx+OY1oVUz4Vo1yw4ISaC7de5zespjddBJEtlgRDIcsbQNF9sdRWB7mdhfX+KDRE0Nhqvg0iWmnwwnzc2Wh+SZSOzn7Fjlmo+yxuj3c8TOick1o2RLKxFRCKL5Out7/kJYRHMwj3fviHUucaWsdi6dWJEy2YZK2gWbb5xltVnm29/Y2HKiq1vX+uYHtE+6yBiZTefZ0mzmj4thzLm2lcPyOLWsWKhGDJ28pieXweR3szYMDtMseH9qYK3rryfb3d/QuasTq3HfuVEWkp9Igu2HjSWo2VZrxPnytLNy47lbOvEiL6rzxo7KkGzkPWhebnUmTIMUc8LqfZbj/1O7NKK7PhMxzRvNrL+WMFDamLDKsRibp0YUT/IUmWhZbEsaQU3m0xcK8uqzUOsc9Qz7WflXweRs6yjMnOcZSck5GCtm7KlrFvNPjGMdRBRA+eTZqUpVmQCE1PQ181K1oViYFonsusgMuXls86j/S27KI2zqJxtuu+5nmNXp3PWQcQsoCWdl+vkq7JduVTrXK8+kT2r2Ruro9ZBRJ+TbVqB7V/Z1zrrwlix7RkYs2ZPEV1Ps6vY5FL2kdQXWnD6njHVCbmV9eGsm7KeZlcL6/NZ3O8eZjO1vPWgfdQjk+44q1NW/vWylm84fT3tfhZW0U0K0N7w1McyZvwdEwdcB5F8tDeX/WoRK/9kIb/qTr1dOZhfhe3q93vMjusgos+HkP2pib3aEfQ5mYExZJ2Qa7mfGj9k1kFEdmkdUaNPekFlaE93Ygghoob3S5ixGTLrfdW1HsheJ7Zp9phiTYSn7Gh2UnfIku01rBMj+qa+59fbLGqs2NdSd0z1xr6XekcuNv0vzDKI/AOcjyK6sfppXQAAAABJRU5ErkJggg==')
+	background-color $bodyBg
+	color $baseColor
+	font-family $baseFontFamily
+	min-width $minWidth px
+
+p
+	margin-bottom 15px
+	line-height 18px
+	&:last-child
+		margin-bottom 0px
+
+a
+	color $linksColor
+	&:hover
+		text-decoration none
+
+ul, ol
+	margin-left 15px
+	li
+		margin-bottom 9px

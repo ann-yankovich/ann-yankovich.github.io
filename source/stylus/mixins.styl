@@ -1,0 +1,58 @@
+$baseFontSize = 12
+$baseColor = #000
+$baseFontFamily = Arial, sans-serif
+
+$bodyBg = #edeff1
+
+$descriptionText = #69696a
+
+$footerFont = 'MyriadPro'
+$footerHeight = 50
+
+$headerBg = #313436
+$headerHeight = 90
+
+$linksColor = #00285c
+
+$menuBg = #3b3f41
+$menuFont = 'HelveticaNeueBold'
+$menuItemClr = #f8f8f8
+$menuItemActive = #f26c4f
+$menuItemBorderR = #282b2c
+$menuItemHover = #acd373
+
+$minWidth = 940
+
+$noticeBg = #ffffcd
+
+$tabsBg = #fafafa
+
+$titlesFont = 'MyriadPro'
+
+font-size(value, r = true)
+	if(r)
+		font-size (value/$baseFontSize) rem
+	else
+		font-size value px
+
+transition()
+	transition all 0.5s ease-out
+
+spriteWidth($sprite)
+	width $sprite[4]
+
+spriteHeight($sprite)
+	height $sprite[5]
+
+spritePosition($sprite)
+	background-position $sprite[2] $sprite[3]
+
+spriteImage($sprite)
+	background-image url(../img/$sprite[8])
+
+sprite($sprite)
+	if !match('hover', selector()) && !match('active', selector())
+		spriteImage($sprite)
+	spritePosition($sprite)
+	spriteWidth($sprite)
+	spriteHeight($sprite)

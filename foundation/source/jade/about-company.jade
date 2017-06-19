@@ -1,0 +1,43 @@
+include helpers/bemto
+include helpers/variables
+include helpers/mixins
+
+-bemto_settings_prefix = 'b-'
+
+doctype html
+html
+	head
+		title about-company
+		include inc/head
+	body(class="p-about-company")
+		
+		.b-common-wrap
+			+b('section').about-company
+				.b-container
+					+e('').top
+						+e('').left
+							+b('span').title-1 Наша Компания
+						+e('').right
+							+b('span').title-1 15000
+							+e('').caption выполненных проектов
+							+b('a')(href='#').link Портфолио
+					+e('').middle
+						+e('').left
+							+e('').caption Наша компания с 2007 года специализируется исключительно на устройстве фундаментов для жилых, административных и промышленных зданий.
+						+e('').right
+							+b('span').title-1 9 лет
+							+e('').caption успешной работы на рынке
+							+b('a')(href='#').link Отзывы
+					+e('').bot
+						+e('').left
+							+e('').caption Работая как с частными лицами, так и с коммерческими организациями, мы зарекомендовали себя как добросовестный исполнитель работ.
+						+e('').right
+							+b('span').title-1 115
+							+e('').caption профессиональных сотрудников
+							+b('a')(href='#').link Вакансии
+
+
+
+
+		include inc/vendor-scripts
+		script(src="js/client.min.js")

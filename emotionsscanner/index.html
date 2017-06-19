@@ -1,0 +1,218 @@
+<!DOCTYPE html>
+
+<html>
+
+<head>
+    <title>TripTogether</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/main.css">
+    <link rel="icon" href="img/favicon-16.png">
+	<script data-main="app.js?v=2.0.0" src="lib/require.js"></script>
+</head>
+
+<!-- <body class="first-screen"> -->
+<!-- <body class="second-screen bungee-jumping"> -->
+<!-- <body class="third-screen"> -->
+<body class="first-screen">
+
+    <header>
+        <div class="container">
+            <div class="first-screen-header">
+                <h1 class="page-title">Looking for the <span>travel inspiration?</span></h1>
+                <p class="page-description">Your photo will tell you <span>where to go!</span></p>
+            </div>
+            <div class="scaning-result-header">
+                <p class="page-description">TripTogether recommends you an adventure:</p>
+                <h1 class="page-title">Bungee Jumping in South Africa</h1>
+            </div>
+        </div>
+    </header>
+
+    <section class="photo-upload">
+        <div class="container columns">
+            <div class="from-facebook col">
+                <span class="icon facebook"></span>
+                <button class="btn facebook">Continue <span>with Facebook</span></button>
+            </div>
+            <div class="from-library col">
+                <span class="icon library"></span>
+                <button class="btn" type="file">Choose <span>from library</span></button>
+                <input id="avatar" name="avatar" type="file" accept="image/*" style="display: none;"/>
+            </div>
+        </div>
+    </section>
+    
+    <section class="scan-result">
+        <div class="scan-item big">
+            <div class="scan-info">
+                <img src="" alt="" class="user-photo avatar">
+                <div class="activity">Your result</div>
+                <ul class="emotions-list">
+                    <li class="happiness emotions-item">
+                        <span class="title">Happiness</span>
+                        <span class="percent">69%</span>
+                        <div class="progress-bar"><span class="progress" style="width: 69%"></span></div>
+                    </li>
+                    <li class="curiosity emotions-item">
+                        <span class="title">Curiosity</span>
+                        <span class="percent">31%</span>
+                        <div class="progress-bar"><span class="progress" style="width: 31%"></span></div>
+                    </li>
+                    <li class="boredom emotions-item">
+                        <span class="title">Boredom</span>
+                        <span class="percent">72%</span>
+                        <div class="progress-bar"><span class="progress" style="width: 72%"></span></div>
+                    </li>
+                </ul>
+                <button class="btn facebook">Share on Facebook</button>
+            </div>
+        </div>
+    </section>
+
+    <section class="bottom-block">
+
+        <div class="container">
+
+            <div class="resent-scans">
+                <h1 class="block-title">Recent emotions scans</h1>
+
+                <ul class="scans-list columns columns-wrap">
+                    <li class="scan-item col">
+                        <img src="img/scans/place-1.jpg" alt="" class="scan-img">
+                        <div class="scan-info">
+                            <img src="img/scans/user-1.jpg" alt="" class="user-photo">
+                            <div class="activity">Kayaking</div>
+                            <div class="location">Halong Bay, Vietnam</div>
+                            <ul class="emotions-list">
+                                <li class="happiness emotions-item">
+                                    <span class="title">Happiness</span>
+                                    <span class="percent">22%</span>
+                                    <div class="progress-bar"><span class="progress" style="width: 22%"></span></div>
+                                </li>
+                                <li class="curiosity emotions-item">
+                                    <span class="title">Curiosity</span>
+                                    <span class="percent">79%</span>
+                                    <div class="progress-bar"><span class="progress" style="width: 79%"></span></div>
+                                </li>
+                                <li class="boredom emotions-item">
+                                    <span class="title">Boredom</span>
+                                    <span class="percent">96%</span>
+                                    <div class="progress-bar"><span class="progress" style="width: 96%"></span></div>
+                                </li>
+                            </ul>
+                        </div>
+                    </li>
+                    <li class="scan-item col">
+                        <img src="img/scans/place-2.jpg" alt="" class="scan-img">
+                        <div class="scan-info">
+                            <img src="img/scans/user-2.jpg" alt="" class="user-photo">
+                            <div class="activity">Sand surfing</div>
+                            <div class="location">Little Sahara, Australia</div>
+                            <ul class="emotions-list">
+                                <li class="happiness emotions-item">
+                                    <span class="title">Happiness</span>
+                                    <span class="percent">88%</span>
+                                    <div class="progress-bar"><span class="progress" style="width: 88%"></span></div>
+                                </li>
+                                <li class="curiosity emotions-item">
+                                    <span class="title">Curiosity</span>
+                                    <span class="percent">41%</span>
+                                    <div class="progress-bar"><span class="progress" style="width: 41%"></span></div>
+                                </li>
+                                <li class="boredom emotions-item">
+                                    <span class="title">Boredom</span>
+                                    <span class="percent">25%</span>
+                                    <div class="progress-bar"><span class="progress" style="width: 25%"></span></div>
+                                </li>
+                            </ul>
+                        </div>
+                    </li>
+                    <li class="scan-item col">
+                        <img src="img/scans/place-3.jpg" alt="" class="scan-img">
+                        <div class="scan-info">
+                            <img src="img/scans/user-3.jpg" alt="" class="user-photo">
+                            <div class="activity">Watching sakura</div>
+                            <div class="location">Kyoto, Japan</div>
+                            <ul class="emotions-list">
+                                <li class="happiness emotions-item">
+                                    <span class="title">Happiness</span>
+                                    <span class="percent">94%</span>
+                                    <div class="progress-bar"><span class="progress" style="width: 94%"></span></div>
+                                </li>
+                                <li class="curiosity emotions-item">
+                                    <span class="title">Curiosity</span>
+                                    <span class="percent">62%</span>
+                                    <div class="progress-bar"><span class="progress" style="width: 62%"></span></div>
+                                </li>
+                                <li class="boredom emotions-item">
+                                    <span class="title">Boredom</span>
+                                    <span class="percent">5%</span>
+                                    <div class="progress-bar"><span class="progress" style="width: 5%"></span></div>
+                                </li>
+                            </ul>
+                        </div>
+                    </li>
+                    <li class="scan-item col">
+                        <img src="img/scans/place-4.jpg" alt="" class="scan-img">
+                        <div class="scan-info">
+                            <img src="img/scans/user-4.jpg" alt="" class="user-photo">
+                            <div class="activity">Swimming with sharks</div>
+                            <div class="location">Bimini, Bahamas</div>
+                            <ul class="emotions-list">
+                                <li class="happiness emotions-item">
+                                    <span class="title">Happiness</span>
+                                    <span class="percent">29%</span>
+                                    <div class="progress-bar"><span class="progress" style="width: 29%"></span></div>
+                                </li>
+                                <li class="curiosity emotions-item">
+                                    <span class="title">Curiosity</span>
+                                    <span class="percent">87%</span>
+                                    <div class="progress-bar"><span class="progress" style="width: 87%"></span></div>
+                                </li>
+                                <li class="boredom emotions-item">
+                                    <span class="title">Boredom</span>
+                                    <span class="percent">74%</span>
+                                    <div class="progress-bar"><span class="progress" style="width: 74%"></span></div>
+                                </li>
+                            </ul>
+                        </div>
+                    </li>
+                </ul>
+            </div>
+
+            <div class="scaning-result-footer">
+                <p class="page-description custom">Ready to feel some wind in your face and test your courage? Or maybe you are afraid of heights <br> and need to conquer that fear. Well, then bungee-jumping is for you!</p>
+                <p class="page-description">Experiencing new emotions is more fun with someone else. Become a part of travel community!</p>
+                <button class="btn">Start your adventure</button>
+            </div>
+
+            <a href="/">
+                <img src="img/logo.png" alt="" class="logo">
+            </a>
+        </div>
+    </section>
+    
+    <section class="registration-form">
+        <div class="container">
+            <h1 class="page-title">Create your <span>own account</span></h1>
+            <p class="page-description">become a part <span>of travel community</span></p>
+            <form action="" class="form" id="register">
+                <img src="" alt="" class="user-photo avatar">
+                <label for="name">Name</label>
+                <input type="text" placeholder="First name" id="name" name="name" required="" class="field">
+                <label for="email">Email</label>
+                <input type="email" placeholder="example@email.com" id="email" name="email" required="" pattern=".+@.+\..+" class="field">
+                <label for="password">Password</label>
+                <input type="password" placeholder="Password" id="password" name="password" required="" pattern=".{4,}" class="field">
+                <button type="submit" class="btn">Sign in</button>
+            </form>
+			<button type="button" class="btn facebook">Sign in with Facebook</button>
+            <a href="/">
+                <img src="img/logo.png" alt="" class="logo">
+            </a>
+        </div>
+    </section>
+</body>
+
+</html>

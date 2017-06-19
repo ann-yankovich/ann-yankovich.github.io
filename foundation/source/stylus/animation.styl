@@ -1,0 +1,98 @@
+		
+@keyframes  fadeOut  {
+  0% {
+    opacity : 1   ;
+  }  
+  100% {
+    opacity : 0   ;
+  }  
+}
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+@keyframes fadeInUp {
+	from {
+		opacity: 0;
+		transform: translate3d(0, 100%, 0);
+	}
+	to {
+		opacity: 1;
+		transform: none;
+	}
+}
+@keyframes fadeInDown {
+  from {
+    opacity: 0;
+    transform: translate3d(0, -100%, 0);
+  }
+
+  to {
+    opacity: 1;
+    transform: none;
+  }
+}
+@keyframes fadeInDown {
+  from {
+    opacity: 0;
+    transform: translate3d(0, -100%, 0);
+  }
+
+  to {
+    opacity: 1;
+    transform: none;
+  }
+}
+@keyframes slideRightDown {
+  from {
+    top: -25%;
+	left: -25%;
+  }
+
+  to {
+	top: 125%;
+	left: 125%;
+  }
+}
+.active
+	// .animation
+	// 	animation-delay attr(data-delay)
+	// 	animation-name attr(data-animation)
+	// 	animation-duration attr(data-animation)
+	.diagonalFade
+		&::after
+			content ''
+			display block
+			position absolute
+			width 150%
+			height 150%
+			top -25%
+			left -25%
+			background-color #f4f8fb
+			transform rotate(135deg)
+			animation-delay 500ms
+			animation-name slideRightDown
+			animation-duration 3000 ms
+			animation-fill-mode both
+	.fadeIn
+		opacity 0
+		animation-name fadeIn
+		animation-duration 1500 ms
+		animation-fill-mode both
+	.fadeInDown
+		opacity 0
+		transform translate3d(0, 100%, 0)
+		animation-name fadeInDown
+		animation-duration 1000 ms
+		animation-fill-mode both
+	.fadeInUp
+		opacity 0
+		transform translate3d(0, -100%, 0)
+		animation-name fadeInUp
+		animation-duration 1000 ms
+		animation-fill-mode both
+		// animation-delay attr(data-delay)

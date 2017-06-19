@@ -1,0 +1,130 @@
+include helpers/bemto
+include helpers/variables
+include helpers/mixins
+
+-bemto_settings_prefix = 'b-'
+
+doctype html
+html
+	head
+		title article
+		include inc/head
+	body(class="p-articles")
+		
+		.b-common-wrap
+			+b('header').header
+				.b-container
+					+e('').top
+						+e('').wrap
+							+e('').left
+								+b('span').logo
+									+e('img')(src='img/logo.png')
+								+b('nav').nav
+									+e('a')(href='#').item О компании
+									+e('a')(href='#').item Услуги
+									+e('a')(href='#').item_active Портфолио
+									+e('a')(href='#').item Цены
+									+e('a')(href='#').item Статьи
+									+e('a')(href='#').item Контакты
+							+e('').right
+								+b('span').phone (812) 936 16 65 
+						+b('a').button_callback Обратный звонок
+					+e('span').title Статьи
+					+e('').text
+						p Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book.
+			.b-container
+				+b('section').particle
+					+e('a')(href='#').item-wrap
+						+e('').item
+							+e('').left
+								+e('img')(src='img/article-img.jpg')
+							+e('').right
+								+e('').date 20.06.2016
+								+e('span').title Характеристика грунтов и геологические изыскания
+								+e('').text От правильности определения характеристик грунта, его состава, зависит конструкция фундамента и прочность всего строения.
+					+e('a')(href='#').item-wrap
+						+e('').item
+							+e('').left
+								+e('img')(src='img/article-img.jpg')
+							+e('').right
+								+e('').date 20.06.2016
+								+e('span').title Характеристика грунтов и геологические изыскания
+								+e('').text От правильности определения характеристик грунта, его состава, зависит конструкция фундамента и прочность всего строения.
+					+e('a')(href='#').item-wrap
+						+e('').item
+							+e('').left
+								+e('img')(src='img/article-img.jpg')
+							+e('').right
+								+e('').date 20.06.2016
+								+e('span').title Характеристика грунтов и геологические изыскания
+								+e('').text От правильности определения характеристик грунта, его состава, зависит конструкция фундамента и прочность всего строения.
+					+e('a')(href='#').item-wrap
+						+e('').item
+							+e('').left
+								+e('img')(src='img/article-img.jpg')
+							+e('').right
+								+e('').date 20.06.2016
+								+e('span').title Характеристика грунтов и геологические изыскания
+								+e('').text От правильности определения характеристик грунта, его состава, зависит конструкция фундамента и прочность всего строения.
+					+e('a')(href='#').item-wrap
+						+e('').item
+							+e('').left
+								+e('img')(src='img/article-img.jpg')
+							+e('').right
+								+e('').date 20.06.2016
+								+e('span').title Характеристика грунтов и геологические изыскания
+								+e('').text От правильности определения характеристик грунта, его состава, зависит конструкция фундамента и прочность всего строения.
+					+e('a')(href='#').item-wrap
+						+e('').item
+							+e('').left
+								+e('img')(src='img/article-img.jpg')
+							+e('').right
+								+e('').date 20.06.2016
+								+e('span').title Характеристика грунтов и геологические изыскания
+								+e('').text От правильности определения характеристик грунта, его состава, зависит конструкция фундамента и прочность всего строения.
+					+e('a')(href='#').item-wrap
+						+e('').item
+							+e('').left
+								+e('img')(src='img/article-img.jpg')
+							+e('').right
+								+e('').date 20.06.2016
+								+e('span').title Характеристика грунтов и геологические изыскания
+								+e('').text От правильности определения характеристик грунта, его состава, зависит конструкция фундамента и прочность всего строения.
+					+e('a')(href='#').item-wrap
+						+e('').item
+							+e('').left
+								+e('img')(src='img/article-img.jpg')
+							+e('').right
+								+e('').date 20.06.2016
+								+e('span').title Характеристика грунтов и геологические изыскания
+								+e('').text От правильности определения характеристик грунта, его состава, зависит конструкция фундамента и прочность всего строения.
+					+e('a')(href='#').item-wrap
+						+e('').item
+							+e('').left
+								+e('img')(src='img/article-img.jpg')
+							+e('').right
+								+e('').date 20.06.2016
+								+e('span').title Характеристика грунтов и геологические изыскания
+								+e('').text От правильности определения характеристик грунта, его состава, зависит конструкция фундамента и прочность всего строения.
+					+e('a')(href='#').item-wrap
+						+e('').item
+							+e('').left
+								+e('img')(src='img/article-img.jpg')
+							+e('').right
+								+e('').date 20.06.2016
+								+e('span').title Характеристика грунтов и геологические изыскания
+								+e('').text От правильности определения характеристик грунта, его состава, зависит конструкция фундамента и прочность всего строения.
+				+b('').pagination
+					+e('a').item_prev
+					+e('a').item.active 1
+					+e('a').item 2
+					+e('a').item 3
+					+e('a').item 4
+					+e('a').item_dotted ...
+					+e('a').item 20
+					+e('a').item_next
+
+
+		include partials/footer
+		include inc/vendor-scripts
+		script(src="js/client.min.js")

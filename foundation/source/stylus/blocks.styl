@@ -1,0 +1,1433 @@
+.b-common-wrap
+	max-width 1910px
+	margin 0 auto
+	padding-bottom 86px
+
+.p-about-company
+	.b-common-wrap
+		padding-bottom 0
+
+.p-first-screen
+	.b-common-wrap
+		padding-bottom 0
+
+.p-main
+	.b-common-wrap
+		padding-bottom 0
+	.b-footer
+		background none
+
+.b-container
+	max-width 1400px
+	padding 0 25px
+	width 100%
+	margin 0 auto
+	position relative
+	height 100%
+
+.p-service
+	.b-back
+		left auto
+
+.b-title-1
+	display block
+	color #5b5b5a
+	font-family 'Intro'
+	font-weight 900
+	margin-bottom 20px
+	font-size 70px
+	margin-bottom 28px
+
+.b-title-2
+	display block
+	color #5b5b5a
+	font-family 'Intro'
+	font-weight 900
+	margin-bottom 20px
+	font-size 70px
+	margin-bottom 28px
+	font-size 30px
+	margin-top 50px
+
+.b-title-3
+	display block
+	color #5b5b5a
+	font-family 'Intro'
+	font-weight 900
+	margin-bottom 20px
+	font-size 70px
+	margin-bottom 28px
+	font-size 20px
+	margin-top 50px
+
+.b-header
+	padding-top 65px
+	padding-bottom 70px
+	margin-bottom 72px
+	position relative
+	&:after
+		content ''
+		stick()
+		background-color rgba(0, 0, 0, .73)
+	.b-logo
+		position relative
+		z-index 1
+		margin-right 40px
+		@media $1100
+			margin-right 30px
+	&__wrap
+		display table
+		width 100%
+		margin-bottom 5px
+	&__left
+		display table-cell
+		vertical-align top
+	&__right
+		display table-cell
+		vertical-align top
+		text-align right
+	&__top
+		clearfix()
+		margin-bottom 36px
+	.b-button
+		float right
+		position relative
+		z-index 1
+	.b-phone
+		position relative
+		z-index 1
+	&__title
+		font-size 70px
+		font-family 'Intro'
+		font-weight 900
+		text-transform uppercase
+		color #fff
+		display block
+		text-align center
+		position relative
+		z-index 1
+		padding-top 35px
+		margin-bottom 60px
+		&:before
+			content ''
+			position absolute
+			hAlign()
+			top -50px
+			sprite($s-header-line)
+	&__text
+		text-align center
+		max-width 970px
+		margin 0 auto
+		padding 0 20px
+		position relative
+		z-index 1
+		*
+			font-size 16px
+			line-height 40px
+			color #fff
+
+.first-screen
+	&.b-header
+		margin-bottom 0
+		position relative
+		z-index 1
+		&:after
+			display none
+	.b-header
+		&__top
+			margin-bottom 230px
+		&__table-wrap
+			display table
+			width 100%
+			margin-bottom 40px
+			&:last-child
+				margin-bottom 180px
+		&__left-cell
+			display table-cell
+			vertical-align top
+			text-align left
+			width 50%
+			padding-top 10px
+		&__right-cell
+			display table-cell
+			vertical-align top
+			text-align left
+			width 50%
+		&__text
+			width 500px
+			font-size 16px
+			line-height 40px
+			color #fff
+			font-weight 300
+			text-align left
+			padding 0
+			margin 0
+			padding-right 20px
+			margin-bottom 40px
+		&__title-2
+			font-size 70px
+			line-height 80px
+			font-family 'Intro'
+			font-weight 900
+			text-transform uppercase
+			color #fff
+			text-align right
+			display block
+			position relative
+			z-index 1
+			letter-spacing 8px
+			&:before
+				content ''
+				position absolute
+				left 0
+				top -190px
+				sprite($s-header-line-2)
+		&__title-wrap
+			display inline-block
+			vertical-align top
+			width 480px
+			margin-bottom 40px
+		&__wrap-caption
+			width 240px
+		&__caption
+			font-size 30px
+			line-height 50px
+			letter-spacing 6px
+			font-weight 600
+			color #fff
+			position relative
+			z-index 1
+			font-family 'Intro'
+			text-transform uppercase
+
+.p-articles
+	.b-header
+		background url('../img/articles-header.jpg') center no-repeat
+
+.p-contacts
+	.b-header
+		background url('../img/header-contacts.jpg') center no-repeat
+
+.p-portfolio
+	background-color #f4f8fb
+	.b-header
+		background url('../img/header-portfolio.jpg') center no-repeat
+
+.p-our-services
+	.b-header
+		background url('../img/header-our-services.jpg') center no-repeat
+
+.b-tabs
+	margin-bottom 50px
+	#tab-1:checked
+		~
+			.b-tabs
+				&__content
+					&_tab-1
+						display block
+		+
+			label
+				color #5b5b5a
+				&:after
+					content none
+	#tab-2:checked
+		~
+			.b-tabs
+				&__content
+					&_tab-2
+						display block
+		+
+			label
+				color #5b5b5a
+				&:after
+					content none
+	&__content
+		display none
+		padding-top 40px
+	input[type='radio']
+		display none
+	label
+		cursor pointer
+		font-size 30px
+		color #0f75bc
+		font-family 'Intro'
+		font-weight 600
+		margin-right 50px
+		dashed-underline(#0f75bc)
+		&:last-child
+			margin-right 0
+
+.b-stuff-list
+	display table
+	border-spacing 0 20px
+	margin-bottom 30px
+	&__tr
+		display table-row
+	&__cell
+		display table-cell
+		vertical-align top
+	&__link
+		text-decoration none
+		font-size 20px
+		font-family 'Intro'
+		font-weight 700
+		color #0f75bc
+		text-transform uppercase
+		padding-right 90px
+		&:hover
+			opacity .7
+		&:after
+			content ''
+			display inline-block
+			vertical-align top
+			margin-top 3px
+			margin-left 10px
+			sprite($s-bold-arrow-right)
+
+
+.b-images-2
+	font-size 0
+	margin 0 -5px 55px -5px
+	img
+		display inline-block
+		vertical-align top
+		width 25%
+		padding 0 5px
+		height auto
+
+.b-our-services
+	padding-bottom 65px
+
+.b-calculator
+	background-image url('../img/calculator-bg.png')
+	background-position right 150px
+	background-repeat no-repeat
+	background-color #f4f8fb
+	padding-top 150px
+	padding-bottom 215px
+	@media $max_lg
+		background-size 50% auto
+	@media $max_md
+		background-position right 250px
+	&__table-wrap
+		display table
+		width 100%
+	&__left
+		padding-top 200px
+		display table-cell
+		vertical-align top
+		width 50%
+	&__right
+		display table-cell
+		vertical-align top
+		width 50%
+	&__title
+		font-size 70px
+		line-height 80px
+		color #5b5b5a
+		font-family 'Intro'
+		font-weight 900
+		display block
+		text-transform uppercase
+		position relative
+		margin-bottom 50px
+		&:before
+			content ''
+			position absolute
+			left 0
+			top -190px
+			sprite($s-calc-line)
+	&__caption
+		margin-bottom 45px
+	&__img
+		position absolute
+		right -25px
+		top 50%
+		max-width 100%
+		transform translateY(-50%)
+		img
+			max-width 100%
+
+.b-list-calc
+	display table
+	width 100%
+	border-spacing 0 20px
+	&__tr
+		display table-row
+	&__cell
+		display table-cell
+		width 50%
+
+
+.b-particle
+	font-size 0
+	text-align left
+	padding-bottom 30px
+	&__item-wrap
+		display inline-block
+		vertical-align top
+		width 50%
+		margin-bottom 30px
+		text-decoration none
+	&__item
+		display table
+		// width 100%
+	&__left
+		display table-cell
+		vertical-align top
+		padding-right 20px
+		img
+			display inline-block
+			vertical-align top
+	&__right
+		display table-cell
+		vertical-align top
+		padding-right 35px
+		text-align left
+	&__date
+		font-size 12px
+		font-weight 400
+		color #0f75bc
+		padding 0 3px
+		display inline-block
+		vertical-align top
+		height 18px
+		line-height 16px
+		border 1px solid #0f75bc
+		margin-bottom 14px
+	&__title
+		font-size 20px
+		font-weight 700
+		color #0f75bc
+		font-family 'Intro'
+		margin-bottom 14px
+		display block
+	&__text
+		font-weight 300
+		color #000000
+		font-size 16px
+		line-height 18px
+		max-height 55px
+		overflow hidden
+
+.b-pagination
+	border-top 1px solid #ccc
+	padding-top 20px
+	text-align right
+	margin-bottom 80px
+	&__item
+		display inline-block
+		vertical-align middle
+		font-size 14px
+		font-weight 900
+		color #0f75bc
+		margin-right 20px
+		text-decoration none
+		&:hover
+			color #5b5b5a
+		&:last-child
+			margin-right 0
+		&_prev
+			sprite($s-pagination-prev)
+			&:hover
+				opacity .7
+		&_next
+			sprite($s-pagination-next)
+			&:hover
+				opacity .7
+		&.active
+			color #5b5b5a
+		&_dotted
+			&:hover
+				cursor default
+				color #0f75bc
+
+.b-contacts-wrap
+	display table
+	width 100%
+	margin-bottom 55px
+	&__contacts
+		display table-cell
+		vertical-align top
+		width 50%
+		padding-right 20px
+		.b-contacts-wrap
+			&__caption
+				margin-bottom 18px
+	&__callback
+		display table-cell
+		vertical-align top
+		width 50%
+		.b-contacts-wrap
+			&__caption
+				margin-bottom 18px
+	&__title-top
+		font-size 30px
+		font-family 'Intro'
+		font-weight 600
+		color #5b5b5a
+		display block
+		margin-bottom 50px
+	&__caption
+		font-weight 300
+		font-size 16px
+		color #5b5b5a
+	&__title
+		font-size 20px
+		font-family 'Intro'
+		font-weight 700
+		color #2a2a2a
+		text-transform uppercase
+		margin-bottom 14px
+	&__link
+		font-size 16px
+		font-weight 300
+		color #0f75bc
+		text-decoration none
+		&:after
+			content ''
+			display inline-block
+			vertical-align middle
+			sprite($s-arr-next-blue)
+			margin-left 7px
+		&:hover
+			opacity .7
+	&__item
+		margin-bottom 24px
+		&:last-child
+			margin-bottom 0
+		*
+			&:last-child
+				margin-bottom 0
+	&__inputs-wrap
+		font-size 0
+		margin 0 -5px 25px -5px
+	&__wrap
+		display inline-block
+		vertical-align top
+		width 50%
+		padding 0 5px
+		input[type=text]
+			display block
+			width 100%
+			height 37px
+	&__submit-wrap
+		display inline-block
+		vertical-align top
+		position relative
+		float right
+		&:before
+			position absolute
+			content ''
+			left 12px
+			vAlign()
+			sprite($s-paper-plane)
+	&__clear-fix
+		clearfix()
+
+.b-map
+	height 684px
+	background #cadfaa
+
+.b-input
+	border 1px solid #c3d2de
+	background #f4f8fb
+	font-size 16px
+	font-weight 300
+	color #2a2a2a
+	padding 0 14px
+	&:focus
+		border 1px solid #0f75bc
+		background #fff
+	&_textarea
+		padding-top 10px
+		padding-bottom 10px
+		display block
+		width 100%
+		margin-bottom 30px
+
+
+
+.b-button
+	display inline-block
+	vertical-align top
+	height 32px
+	line-height 28px
+	font-size 11px
+	text-decoration none
+	border-radius 16px
+	text-transform uppercase
+	&_callback
+		border 2px solid #fff
+		padding 0 10px 0 30px
+		color #fff
+		position relative
+		z-index 1
+		&:before
+			content ''
+			position absolute
+			vAlign()
+			left 10px
+			sprite($s-callback-ico)
+	&:hover
+		opacity .7
+	&_send
+		border 2px solid #0f75bc
+		border-radius 16px
+		padding 0 10px 0 38px
+		color #0f75bc
+		background #fff
+		line-height 30px
+		font-size 11px
+		font-family 'Intro'
+		font-weight 700
+	&_download
+		border 2px solid #0f75bc
+		border-radius 16px
+		padding 0 10px 0 12px
+		color #0f75bc
+		background #f5f9fb
+		line-height 28px
+		font-size 11px
+		font-family 'Intro'
+		font-weight 700
+		&:before
+			content ''
+			display inline-block
+			vertical-align middle
+			sprite($s-arrow-down-blue)
+			margin-right 8px
+	&_go
+		border 2px solid #0f75bc
+		border-radius 16px
+		padding 0 10px 0 12px
+		color #0f75bc
+		background #f5f9fb
+		line-height 28px
+		font-size 11px
+		font-family 'Intro'
+		font-weight 700
+		&:before
+			content ''
+			display inline-block
+			vertical-align middle
+			sprite($s-arr-go)
+			margin-right 8px
+			margin-top -2px
+
+
+.b-btn-center
+	text-align center
+	margin-bottom 60px
+
+
+.b-portfolio
+	font-size 0
+	text-align left
+	margin 0 -5px 50px -5px
+	&_slider
+		margin 0 0 67px 0
+		text-align right
+		.b-portfolio
+			&__item-wrap
+				display block
+				padding 0
+				width auto
+				margin-bottom 0
+				@media $max_md
+					width auto
+	&__item-wrap
+		display inline-block
+		vertical-align top
+		padding 0 5px
+		margin-bottom 10px
+		width 25%
+		@media $1400
+			width (100/3)%
+		@media $1060
+			width 50%
+	&__item
+		position relative
+		display block
+		img
+			width 100%
+			height auto
+		&:after
+			content ''
+			position absolute
+			bottom 0
+			left 0
+			width 100%
+			height 70%
+			background linear-gradient(to bottom, rgba(0, 0, 0, 0), rgba(0, 0, 0, .9))
+			opacity 1
+		&:before
+			content ''
+			stick()
+			background rgba(15, 117, 188, .73)
+			opacity 0
+			z-index 1
+			transition .5s
+		&:hover
+			&:after
+				opacity 1
+			&:before
+				opacity 1
+			.b-portfolio
+				&__show
+					display block
+	&__show
+		display none
+		font-size 11px
+		line-height 14px
+		font-family 'Intro'
+		font-weight 700
+		color #fff
+		text-transform uppercase
+		position absolute
+		z-index 1
+		hAlign()
+		top 30%
+		width 72px
+		text-align center
+		&:before
+			content ''
+			position absolute
+			vAlign()
+			sprite($s-arr-right)
+			left -15px
+			animation left-arrow 1.5s ease-in-out infinite
+		&:after
+			content ''
+			position absolute
+			vAlign()
+			sprite($s-arr-left)
+			right -15px
+			animation right-arrow 1.5s ease-in-out infinite
+	&__text
+		position absolute
+		z-index 1
+		left 30px
+		right 30px
+		bottom 28px
+	&__title
+		font-size 14px
+		line-height 17px
+		font-family 'Intro'
+		font-weight 900
+		color #fff
+		text-transform uppercase
+		text-shadow 0 1px black
+		margin-bottom 12px
+		display block
+		@media $max_lg
+			font-size 12px
+			line-height 15px
+	&__address
+		font-size 16px
+		line-height 18px
+		font-weight 300
+		color #fff
+		display block
+		@media $max_lg
+			font-size 14px
+			line-height 16px
+
+@-webkit-keyframes left-arrow {
+	0% {
+		left: -15px;
+	}
+	50% {
+		left: -10px;
+	}
+	100% {
+		left: -15px;
+	}
+}
+
+
+@-webkit-keyframes right-arrow {
+	0% {
+		right: -15px;
+	}
+	50% {
+		right: -10px;
+	}
+	100% {
+		right: -15px;
+	}
+}
+
+.b-portfolio-item
+	font-size 0
+	background #000
+	&__left
+		display inline-block
+		vertical-align top
+		width 50%
+		position relative
+	&__right
+		position relative
+		display inline-block
+		vertical-align top
+		width 50%
+		padding-top 160px
+		padding-bottom 74px
+		background #fff
+		.b-title-2
+			margin-top 66px
+	&__wrap
+		max-width 700px
+		padding-left 90px
+		padding-right 25px
+		p
+			line-height 20px
+	&__title-2
+		font-size 30px
+		display block
+		color #5b5b5a
+		font-weight 600
+		font-family 'Intro'
+		margin-top 50px
+		margin-bottom 20px
+	&__address
+		font-size 16px
+		font-weight 300
+		color #5b5b5a
+		margin-bottom 26px
+	&__wrap-cost
+		height 140px
+		background #f4f8fb
+		display table
+		width 100%
+		margin-bottom 56px
+	&__cell
+		display table-cell
+		vertical-align middle
+	&__price
+		padding 5px 0
+		display inline-block
+		vertical-align top
+		font-size 30px
+		font-weight 900
+		color #5b5b5a
+		margin-right 30px
+		font-family 'Intro'
+		&:before
+			content ''
+			display inline-block
+			vertical-align top
+			sprite($s-price-ico)
+			margin-right 10px
+	&__days
+		padding 5px 0
+		display inline-block
+		vertical-align top
+		font-size 30px
+		font-weight 900
+		color #5b5b5a
+		font-family 'Intro'
+		&:before
+			content ''
+			display inline-block
+			vertical-align top
+			sprite($s-clock-ico)
+			margin-right 10px
+	&__title
+		font-size 14px
+		font-weight 900
+		font-family 'Intro'
+		color #5b5b5a
+		text-transform uppercase
+		margin-bottom 14px
+	&__item
+		margin-bottom 25px
+		&:last-child
+			margin-bottom 75px
+	&__text
+		*
+			font-size 16px
+			font-weight 300
+			color #000
+			line-height 20px
+
+.b-portfolio-slider-wrap
+	position fixed
+	width 50%
+	min-width 496px
+
+.b-portfolio-slider
+	position relative
+	&:after
+		content ''
+		position absolute
+		z-index 1
+		bottom 0
+		left 0
+		height 196px
+		width 100%
+		background linear-gradient(to bottom, rgba(0, 0, 0, 0), rgba(0, 0, 0, .9))
+	.owl-prev
+		sprite($s-slider-prev)
+		float left
+		position relative
+		z-index 2
+		&:hover
+			opacity .7
+	.owl-next
+		sprite($s-slider-next)
+		float right
+		position relative
+		z-index 2
+		&:hover
+			opacity .7
+	.owl-nav
+		position absolute
+		bottom 60px
+		left 90px
+		right 90px
+		clearfix()
+
+.services-slider
+	.owl-nav
+		margin-top 20px
+		clearfix()
+	.owl-prev
+		sprite($s-pagination-prev)
+		float left
+	.owl-next
+		float right
+		sprite($s-pagination-next)
+	.owl-dot
+		display inline-block
+		vertical-align middle
+		width 14px
+		height 14px
+		border-radius 50%
+		border 2px solid #b0b0b0
+		margin-right 10px
+		&.active
+			width 8px
+			height 8px
+			background #0f75bc
+			border none
+	.owl-dots
+		text-align center
+		margin-top -24px
+
+.b-counter
+	font-size 20px
+	font-family 'Intro'
+	font-weight 900
+	color #fff
+	position absolute
+	bottom 68px
+	z-index 1
+	hAlign()
+	text-align center
+	width 200px
+
+.b-services
+	display table
+	table-layout fixed
+	width 100%
+	&__left
+		display table-cell
+		vertical-align top
+		width 50%
+		background-image url('../img/services-bg.jpg')
+		background-color #000
+		background-repeat no-repeat
+		background-attachment fixed
+	&__right
+		position relative
+		display table-cell
+		vertical-align top
+		width 50%
+		padding-top 160px
+	&__wrap
+		max-width 700px
+		padding-left 90px
+		padding-right 25px
+		margin-bottom 55px
+		&:last-child
+			margin-bottom 0
+	&__section
+		font-size 30px
+		font-family 'Intro'
+		font-weight 600
+		color #5b5b5a
+		margin-bottom 16px
+		&:after
+			content '/'
+			display inline-block
+			vertical-align middle
+			font-size 30px
+			font-family 'Intro'
+			font-weight 600
+			color #0f75bc
+			white-space nowrap
+	&__bottom
+		background #f4f8fb
+		padding-top 50px
+		padding-bottom 60px
+	&__caption
+		font-size 30px
+		font-family 'Intro'
+		font-weight 600
+		color #5b5b5a
+		margin-bottom 55px
+
+.b-images
+	font-size 0
+	margin 55px -10px 55px -10px
+	img
+		display inline-block
+		vertical-align top
+		width 50%
+		height auto
+		padding 0 10px
+
+.b-about-company
+	background url('../img/company-bg.jpg') center 118px no-repeat
+	padding-top 170px
+	padding-bottom 200px
+	.b-title-1
+		text-transform uppercase
+		margin-bottom 10px
+	&__top
+		display table
+		width 100%
+		padding-bottom 80px
+		.b-about-company
+			&__left
+				.b-title-1
+					margin-bottom 0
+	&__left
+		display table-cell
+		vertical-align top
+		text-align left
+		width 480px
+	&__right
+		display table-cell
+		vertical-align top
+		text-align right
+	&__middle
+		display table
+		width 100%
+		padding-bottom 80px
+		.b-about-company
+			&__left
+				padding-top 10px
+	&__bot
+		display table
+		width 100%
+		.b-about-company
+			&__left
+				padding-top 10px
+	&__caption
+		font-size 16px
+		line-height 40px
+		color #000
+		font-weight 300
+
+
+.p-first-screen
+	.b-common-wrap
+		background url('../img/first-screen-bg.jpg') center top no-repeat
+		position relative
+		&:after
+			content ''
+			stick()
+			background rgba(0, 0, 0, .73)
+	.b-header
+		&:after
+			content none
+
+.b-link
+	font-size 16px
+	font-weight 300
+	color #0f75bc
+	text-decoration none
+	white-space nowrap
+	&:after
+		content ''
+		display inline-block
+		vertical-align middle
+		sprite($s-arr-next-blue)
+		margin-left 7px
+	&:hover
+		opacity .7
+
+.b-main-contacts
+	background url('../img/main-contacts-bg.jpg') center top no-repeat
+	padding-top 145px
+	padding-bottom 196px
+	position relative
+	&:before
+		content ''
+		stick()
+		background rgba(0, 0, 0, .73)
+	&__table-wrap
+		display table
+		width 100%
+	&__left
+		display table-cell
+		vertical-align top
+		width 50%
+		text-align center
+		img
+			display inline-block
+			vertical-align top
+	&__right
+		padding-top 40px
+		padding-left 90px
+		display table-cell
+		vertical-align top
+		width 50%
+		@media $max_md
+			padding-left 40px
+	&__item
+		margin-bottom 22px
+	.b-title-1
+		color #fff
+		margin-bottom 60px
+	&__title
+		font-size 16px
+		color #fff
+		margin-bottom 14px
+	&__caption
+		font-size 20px
+		line-height 24px
+		color #fff
+		text-transform uppercase
+		font-weight 700
+		margin-bottom 12px
+
+
+.b-back
+	position fixed
+	z-index 10
+	top 0
+	left 50%
+	background rgba(255, 255, 255, .7)
+	width 100%
+	padding-top 76px
+	padding-left 90px
+	height 130px
+	text-decoration none
+	font-size 14px
+	font-weight 300
+	color #0f75bc
+	text-transform uppercase
+	display block
+	margin-bottom 65px
+	&:before
+		content ''
+		display inline-block
+		vertical-align top
+		sprite($s-arr-back)
+		margin-right 8px
+	&__link
+		text-decoration none
+		&:hover
+			opacity .7
+	@media $max_sm
+		left 496px
+
+.b-logo
+	text-decoration none
+	display inline-block
+	vertical-align bottom
+
+.b-phone
+	font-size 24px
+	color #fff
+	font-family 'Intro'
+	font-weight 700
+
+.b-nav
+	display inline-block
+	vertical-align bottom
+	position relative
+	z-index 1
+	&__item
+		display inline-block
+		vertical-align bottom
+		margin-right 40px
+		text-decoration none
+		color #fff
+		text-transform uppercase
+		padding-bottom 10px
+		border-bottom 2px solid transparent
+		font-size 14px
+		font-weight 700
+		font-family 'Intro'
+		@media $1100
+			margin-right 30px
+		&:last-child
+			margin-right 0
+		&:hover
+			border-bottom 2px solid #0f75bc
+		&_active
+			border-bottom 2px solid #0f75bc
+
+.b-swd
+	text-decoration none
+	display inline-block
+	vertical-align bottom
+
+.b-footer
+	position absolute
+	z-index 1
+	width 100%
+	bottom 0
+	left 0
+	background #30302f
+	min-height 87px
+	padding-top 16px
+	&__copyright-ico
+		sprite($s-copyright)
+		display inline-block
+	&__logo
+		position absolute
+		left 50%
+		bottom 0
+		margin-left -162px
+	&__table-wrap
+		display table
+		width 100%
+	&__left
+		display table-cell
+		vertical-align bottom
+		font-size 13px
+		line-height 16px
+		font-family 'Clear Sans'
+		font-weight 300
+		color #929292
+		@media $1100
+			font-size 12px
+	&__right
+		display table-cell
+		vertical-align bottom
+		text-align right
+	&__copy
+		display table
+		a
+			text-decoration none
+			color #fff
+			&:hover
+				text-decoration underline
+	&__left-copyright
+		display table-cell
+		vertical-align middle
+		padding-right 10px
+	&__right-copyright
+		display table-cell
+		vertical-align middle
+
+
+.b-first-screen
+	background url('../img/first-screen-bg.jpg') center top no-repeat
+	position relative
+	background-size cover
+	&:after
+		content ''
+		stick()
+		background rgba(0, 0, 0, .73)
+
+
+.b-main-services
+	background url('../img/services-pattern.jpg') repeat
+	height 960px
+	position relative
+	text-align: center;
+	overflow: hidden;
+	v-out()
+	&__container
+		max-width 1600px
+		padding-right 125px
+		padding-left 25px
+		width 100%
+		margin 0 auto
+		v-in()
+		position relative
+		z-index 1
+	&:after
+		content ''
+		stick()
+		background rgba(0, 0, 0, .73)
+	&__table-wrap
+		display table
+		width 100%
+	&__left, &__right
+		display table-cell
+		vertical-align middle
+		width 50%
+		text-align: left;
+	&__left
+		padding-right 175px
+	&__border-wrap
+		max-width 624px
+		padding 75px 85px 80px
+		border 6px solid #fff
+		position: relative;
+		&:before
+			content: ''
+			display: block;
+			width: 179px;
+			height: 180px;
+			// background-color: rgba(0,0,0,.73);
+			background-image: url('../img/border-mask.jpg');
+			background-repeat: repeat;
+			position: absolute;
+			top: -7px;
+			right: -6px;
+			// transform: rotate(45deg);
+	&__title
+		display: block;
+		font-family 'Intro'
+		font-size: 70px;
+		font-weight: 700
+		text-transform: uppercase;
+		color: #fff;
+		margin-bottom: 30px
+		position: relative;
+		z-index: 1
+
+.b-main-services-item
+	display: table;
+	table-layout: fixed;
+	width: 100%;
+	// margin-bottom 54px
+	padding: 20px 0
+	&__left, &__right
+		display: table-cell;
+		vertical-align: middle;
+	&__right
+		text-align: right;
+	&__link
+		font-size 20px
+		font-weight 700
+		color #fff
+		font-family 'Intro'
+		text-transform uppercase
+		text-decoration none
+		dashed-underline(#fff)
+		&:hover, &.active
+			color #0f75bc
+			&:after
+				content none
+	&:hover
+		.b-main-services-item__more
+			display: block;
+	&__more
+		position relative
+		// right 0
+		// top 80px
+		font-size 14px
+		color #fff
+		text-decoration none
+		padding-right 34px
+		display none
+		&:before
+			content ''
+			position absolute
+			right 14px
+			top -1px
+			sprite($s-arr-right)
+			animation arr-right 1s ease-in-out infinite
+		&:after
+			content ''
+			position absolute
+			top -1px
+			right 0
+			sprite($s-arr-left)
+			animation arr-left 1s ease-in-out infinite
+
+.b-main-services-menu
+	&__item
+		display: block;
+		color: #fff;
+		font-size: 20px;
+		text-decoration: none;
+		padding: 20px 0
+		position: relative;
+		&:before
+			content: ''
+			width: 100%;
+			height: 1px
+			display: none;
+			background-color: #0f75bc;
+			position: absolute;
+			top: 50%;
+			right: 105%;
+		&.current
+			&:before
+				display: block;
+
+@-webkit-keyframes arr-right {
+	0% {
+		right: 14px;
+	}
+	50% {
+		right: 20px;
+	}
+	100% {
+		right: 14px;
+	}
+}
+
+@-webkit-keyframes arr-left {
+	0% {
+		right: 0;
+	}
+	50% {
+		right: -6px;
+	}
+	100% {
+		right: 0;
+	}
+}
+
+
+.js-tab-content
+	display: none;
+
+#tab-1
+	display: block;
+
+.first-screen
+	.b-footer
+		&__left
+			font-size 14px
+			color #fff
+		&__pointer-ico
+			display inline-block
+			sprite($s-footer-pointer)
+		&__link
+			color #0f75bc
+		&__address
+			@media $max_md
+				width 350px
+	&.b-footer
+		background none
+
+
+.fullpage-wrapper
+	.b-first-screen, 
+	.b-about-company, 
+	.b-main-services,
+	.b-calculator,
+	.b-main-contacts
+		position absolute
+		top 0px
+		left 0px
+		width 100%
+		height 100%
+	.b-calculator
+		background-image none
+		&__left, &__right
+			position relative
+		&__left
+			z-index 1

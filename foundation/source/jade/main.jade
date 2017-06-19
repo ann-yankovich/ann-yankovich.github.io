@@ -1,0 +1,178 @@
+include helpers/bemto
+include helpers/variables
+include helpers/mixins
+
+-bemto_settings_prefix = 'b-'
+
+doctype html
+html
+	head
+		title main
+		include inc/head
+	body(class="p-main")
+		
+		.b-common-wrap#fullpage
+			.section
+				+b('section').first-screen.fadeIn
+					+b('header').header.first-screen
+						.b-container
+							+e('').top
+								+e('')(data-delay="1000ms").wrap.fadeInDown
+									+e('').left
+										+b('nav').nav
+											+e('a')(href='#').item О компании
+											+e('a')(href='#').item Услуги
+											+e('a')(href='#').item_active Портфолио
+											+e('a')(href='#').item Цены
+											+e('a')(href='#').item Статьи
+											+e('a')(href='#').item Контакты
+									+e('').right
+										+b('span').phone (812) 936 16 65 
+								+b('a').button_callback Обратный звонок
+							+e('').table-wrap
+								+e('')(data-delay="3000ms").left-cell.fadeInUp
+									+e('').text Строительство и проектирование фундаментов для жилых, административных и промышленных зданий в Санкт-Петербурге, Лен. области и других регионах РФ. 
+									+e('').text Обеспечиваем стабильно высокое качество работ с 2007 года. 
+								+e('').right-cell
+									+e('')(data-delay="2000ms").title-wrap.fadeInUp
+										+e('span').title-2 Надежная основа
+									+e('')(data-delay="2200ms").wrap-caption.fadeInUp
+										+e('span').caption Успешного будущего
+					+b('footer').footer.first-screen
+						+e('').logo
+							+e('img')(src='img/logo-footer.png')
+						.b-container
+							+e('').table-wrap
+								+e('').left
+									+e('')(data-delay="1000ms").copy.fadeInUp
+										+e('').left-copyright
+											+e('span').pointer-ico
+										+e('').right-copyright
+											+e('').address Санкт-Петербург, пр-т Александровской фермы 29, лит. ВГ, оф. 2С-14
+											+e('a')(href='#').link Посмотреть на карте
+			.section
+				+b('section').about-company
+					.b-container
+						+e('').top
+							+e('').left
+								+b('span')(data-delay="1000ms").title-1.fadeInUp Наша Компания
+							+e('')(data-delay="2000ms").right.fadeInUp
+								+b('span').title-1 15000
+								+e('').caption выполненных проектов
+								+b('a')(href='#').link Портфолио
+						+e('').middle
+							+e('').left
+								+e('')(data-delay="1300ms").caption.fadeInUp Наша компания с 2007 года специализируется исключительно на устройстве фундаментов для жилых, административных и промышленных зданий.
+							+e('')(data-delay="2300ms").right.fadeInUp
+								+b('span').title-1 9 лет
+								+e('').caption успешной работы на рынке
+								+b('a')(href='#').link Отзывы
+						+e('').bot
+							+e('').left
+								+e('')(data-delay="1600ms").caption.fadeInUp Работая как с частными лицами, так и с коммерческими организациями, мы зарекомендовали себя как добросовестный исполнитель работ.
+							+e('')(data-delay="2600ms").right.fadeInUp
+								+b('span').title-1 115
+								+e('').caption профессиональных сотрудников
+								+b('a')(href='#').link Вакансии
+			.section
+				+b('section').main-services
+					+e('').container
+						+e('').table-wrap
+							+e('').left
+								+e('').border-wrap
+									+e('span').title Услуги
+									+b('').main-services-menu.js-tab-menu
+										+e('a')(href='#tab-1').item.current Устройство коробки дома
+										+e('a')(href='#tab-2').item Устройство кровли
+							+e('').right
+								div#tab-1.js-tab-content
+									+b('').main-services-item
+										+e('').left
+											+e('a')(href='#').link Кирпич
+										+e('').right
+											+e('a')(href='#').more подробнее
+									+b('').main-services-item
+										+e('').left
+											+e('a')(href='#').link Газобетон
+										+e('').right
+											+e('a')(href='#').more подробнее
+									+b('').main-services-item
+										+e('').left
+											+e('a')(href='#').link Керамзитобетон
+										+e('').right
+											+e('a')(href='#').more подробнее
+									+b('').main-services-item
+										+e('').left
+											+e('a')(href='#').link Газобетон
+										+e('').right
+											+e('a')(href='#').more подробнее
+									+b('').main-services-item
+										+e('').left
+											+e('a')(href='#').link Керамзитобетон
+										+e('').right
+											+e('a')(href='#').more подробнее
+								div#tab-2.js-tab-content
+									+b('').main-services-item
+										+e('').left
+											+e('a')(href='#').link Кирпич
+										+e('').right
+											+e('a')(href='#').more подробнее
+									+b('').main-services-item
+										+e('').left
+											+e('a')(href='#').link Газобетон
+										+e('').right
+											+e('a')(href='#').more подробнее
+			.section
+				+b('section').calculator
+					.b-container
+						+e('').table-wrap
+							+e('').left
+								+e('span')(data-delay="2300ms").title.fadeInUp Калькулятор стоимости
+								+e('p')(data-delay="2500ms").caption.fadeInUp Если вы уже определились с типом и размерами подходящего Вам фундамента, Вы можете воспользоваться нашими онлайн-калькуляторами:
+								+b('')(data-delay="2700ms").list-calc.fadeInUp
+									+e('').tr
+										+e('').cell
+											+b('a')(href='#').link Расчет ленточного фундамента
+										+e('').cell
+											+b('a')(href='#').link Расчет стоимости цокольного этажа
+									+e('').tr
+										+e('').cell
+											+b('a')(href='#').link Расчет монолитной плиты
+										+e('').cell
+											+b('a')(href='#').link Расчет свайного фундамента
+									+e('').tr
+										+e('').cell
+											+b('a')(href='#').link Расчет утепленной шведской плиты
+										+e('').cell
+											+b('a')(href='#').link Индивидуальный расчет
+							+e('').right
+								+e('div').img.diagonalFade
+									+e('img')(src="img/calculator-bg-line.png" alt="")
+								+e('img')(src="img/calculator-bg.png" alt="" data-delay="2200ms").img.fadeIn
+			.section
+				+b('section').main-contacts
+					.b-container
+						+e('').table-wrap
+							+e('').left
+								+e('img')(src='img/main-contacts-img.png')
+							+e('').right
+								+b('span').title-1 Контакты
+								+e('').item
+									+e('').title Адрес:
+									+e('').caption с.-петербург, пр-т александровской фермы 29,  лит. вг оф. 2с-14
+									+b('a')(href='#').link Показать на карте
+								+e('').item
+									+e('').title Контактный телефон:
+									+e('').caption (812) 936-16-65
+									+b('a')(href='#').link Заказать звонок
+								+e('').item
+									+e('').title Электронная почта:
+									+e('').caption zakaz@fundament-spb.ru
+									+b('a')(href='#').link Написать письмо
+								+e('').item
+									+e('').title Режим работы:
+									+e('').caption пн-сб 09.00-19.00
+
+
+		include inc/vendor-scripts
+		script(src="js/client.min.js")

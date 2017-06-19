@@ -1,0 +1,90 @@
+
+$('body').on('input', '#js-search_products', function () {
+	var value = $(this).val();
+	filterItemsByTitle( value );
+});
+
+$('body').on('click', '.js-add_to_report', function () {
+	var item_block, inputs,
+		id = $(this).data('id'),
+		item = $(this).parents('.b-table-ice__item'),
+		title = item.find('.js-item_title').text(),
+		weight = item.find('.js-weight').val();
+		unit = item.find('.js-weight').data('unit');
+
+		if(!weight){
+			var answer = {};
+			answer.message = 'Необходимо указать остаток';
+			show_success_message(answer);
+			return false;
+		}
+
+		item_block = '<div class="b-table-report__cell">'+title+'</div><div class="b-table-report__cell">'+weight+' '+unit+'</div>';
+		inputs = '<input type="hidden" name="item_id_'+id+'" value="'+id+'"><input type="hidden" name="weight_'+id+'" value="'+weight+'">';
+
+		$("<div/>", {
+			'class': 'b-table-report__item',
+			html: item_block,
+			append: inputs
+		}).appendTo('#js-report_list');
+
+		item.remove();
+		return false;
+});
+$('.js-weight').keypress(function(event){
+		var key, keyChar;
+		if(!event) var event = window.event;
+
+		if (event.keyCode) key = event.keyCode;
+		else if(event.which) key = event.which;
+
+		if(key==null || key==0 || key==8 || key==13 || key==9 || key==46 || key==37 || key==39 ) return true;
+		keyChar=String.fromCharCode(key);
+
+		if(!/\d/.test(keyChar))	return false;
+
+	});
+
+
+$('#continue-report-btn').click( function() {
+	var ct = $('#js-report_list').find('.b-table-report__item').length;
+	$('#continue-report .message').html('Заполенено товаров : '+ ct);
+	$('.continue-report').click();
+});
+$('#sbmt-report').click( function() {
+	var $form = $('#f_send-report'),
+		storage= $('#storage').val(),
+		time= $('#time').val();
+	$form.find('.b-ice-submit p.error').html('');
+
+	$form.ajaxSubmit({
+		dataType:  'json',
+		data: { handler: 'Reports', command: 'add_user_report', storage: storage, time: time },
+		success: function(data) {
+			if(!data.result) {
+				$('#continue-report .b-popup__close').click();
+				$('.b-ice-submit p.error').html(data.message);
+				// show_error_message(data, $form);
+			} else {
+				show_success_message(data);
+				$form.resetForm();
+				setTimeout(function() {
+					window.location.reload()
+				}, 2000);
+			}
+		}
+	});
+	return false;
+});
+
+
+function filterItemsByTitle( search ){
+	if( !search && search == '') {
+		$( '.b-table-ice__item' ).show();
+		return true;
+	}
+	$( '.b-table-ice__item' ).hide();
+	var uppValue = search.slice(0, 1).toUpperCase() + search.slice(1);
+	$( '.js-item_title:contains('+search+')' ).parents( '.b-table-ice__item' ).show();
+	$( '.js-item_title:contains('+uppValue+')' ).parents( '.b-table-ice__item' ).show();
+}

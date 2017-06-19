@@ -1,0 +1,191 @@
+html
+	height 100%
+	font-size $rootFontSize, false
+
+body
+	font-family 'Clear Sans', sans-serif
+	min-height 100%
+	color #000000
+	position relative
+	-webkit-text-size-adjust 100%
+	-webkit-font-size-adjust 100%
+	@media $max_sm
+		width 992px
+
+img
+	display block
+
+h1, h2, h3, h4, h5
+	color #5b5b5a
+	font-family 'Intro'
+	font-weight 900
+	margin-bottom 20px
+
+h1
+	font-size 70px
+	margin-bottom 28px
+h2
+	font-size 30px
+	margin-top 50px
+h3
+	font-size 20px
+	margin-top 50px
+h4
+	font-size 14px
+	text-transform uppercase
+	margin-bottom 14px
+h5
+	font-size 13px
+
+p
+	font-size 16px
+	line-height 40px
+	color #000
+	font-weight 300
+	margin-bottom 20px
+	&:last-child
+		margin-bottom 0
+
+ul, ol
+	margin-bottom 20px
+	font-size 16px
+	line-height 20px
+	color #000000
+	li
+		margin-bottom 18px
+
+ul
+	list-style none
+	li
+		padding-left 35px
+		position relative
+		&:before
+			content ''
+			position absolute
+			left 0
+			top 2px
+			width 14px
+			height 14px
+			border 4px solid #0f75bc
+			margin-right 20px
+	
+ol
+	li
+		list-style-position inside
+
+table
+	width 100%
+	border 1px solid #d3d3d3
+	border-collapse separate
+	overflow hidden
+	margin 27px 0
+	th, td
+		padding 14px 20px
+		border-bottom 1px solid #d3d3d3
+		border-right 1px solid #d3d3d3
+		line-height 20px
+		font-size 14px
+		vertical-align top
+		&:last-child
+			border-right 0
+	th
+		font-weight 500
+		font-size 16px
+		background-color #ebebeb
+		text-align left
+		color #242424
+		&.small
+			width 580px
+	td
+		color #000
+	tr
+		&:last-child
+			td, td
+				border-bottom 0
+
+i
+	font-style italic
+
+b, strong
+	font-weight 600
+
+button
+	border 0
+
+a
+	cursor pointer
+
+.-no-border, _no-border *
+	border 0
+
+._img-left,
+._img-right
+	margin-bottom 14px
+
+._img-left
+	float left
+	margin-right 14px
+
+._img-right
+	float right
+	margin-left 14px
+
+.-text-center
+	text-align center
+
+.-text
+	> p
+		&:last-child
+			margin-bottom 0
+
+.fancybox-skin
+	box-shadow none !important
+	border-radius 0
+
+.fancybox-wrap
+	opacity 0
+
+.owl-carousel .owl-item
+	-webkit-transform translateZ(0)
+
+.swiper-container
+	.swiper-prev, .swiper-next
+		vAlign()
+	.swiper-prev
+		left 0
+	.swiper-next
+		right 0
+
+.-hidden-lg
+	@media $max_lg
+		display none
+.-hidden-md
+	@media $max_md
+		display none
+.-hidden-sm
+	@media $max_sm
+		display none
+.-hidden-xs
+	@media $max_xs
+		display none
+
+.-visible-lg
+	display none
+	@media $max_lg
+		display block
+.-visible-md
+	@media $max_md
+		display block
+	@media $min_lg
+		display none
+.-visible-sm
+	@media $max_sm
+		display block
+	@media $min_md
+		display none
+.-visible-xs
+	@media $max_xs
+		display block
+	@media $max_sm
+		display none
+

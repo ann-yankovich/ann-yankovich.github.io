@@ -1,0 +1,115 @@
+$(function () {
+	$('#f_register').submit(function() {
+    	var $form = $(this);
+		$form.find('p.error').remove();
+		$form.ajaxSubmit({ 
+			dataType:  'json',
+			data: { handler: 'Registration', command: 'site_registration' },
+			success: function(data) {
+				if(!data.result) {
+					show_error_message(data, $form);
+				} else {
+					show_success_message(data);
+					setTimeout(function() {
+						if ($form.data('click')) {
+							$($form.data('click')).click();
+						}
+					}, 2000);
+					$form.resetForm();
+				}
+			}
+		}); 
+		return false;
+	});
+	
+	$('#f_recover_password').submit(function() {
+    	var $form = $(this);
+		$form.find('p.error').remove();
+		$form.ajaxSubmit({ 
+			dataType:  'json', 
+			data: { handler: 'Registration', command: 'site_change_password' },
+			success: function(response) {
+				if(!response.result) {
+					show_error_message(response, $form);
+				} else {
+					show_success_message(response);
+					$form.resetForm();
+				}
+			}
+		});
+		return false;
+	});
+
+
+	$('#f_enter').submit( function() {
+    	var $form = $(this);
+		$form.find('p.error').remove();
+
+		$form.ajaxSubmit({ 
+			dataType:  'json', 
+			data: { handler: 'Authorization', command: 'login' },
+			success: function(response) {
+				if(!response.result) {
+					show_error_message(response, $form);
+				} else {
+					show_success_message(response);
+					setTimeout(function(){
+						window.location.href = '/reports';
+					}, 2000);
+				}
+			}
+		});
+		return false;
+	});
+
+	$('#f_profile').submit(function() {
+    	var $form = $(this);
+		$form.find('p.error').remove();
+		$form.ajaxSubmit({ 
+			dataType:  'json', 
+			data: { handler: 'Registration', command: 'user_save_profile' },
+			success: function(response) {
+				if(!response.result) {
+					show_error_message(response, $form);
+				} else {
+					show_success_message(response);
+				}
+			}
+		});
+		return false;
+	});
+
+	$('#f_pass').submit(function() {
+    	var $form = $(this);
+		$form.find('p.error').remove();
+		$form.ajaxSubmit({ 
+			dataType:  'json', 
+			data: { handler: 'Registration', command: 'user_change_pass' },
+			success: function(response) {
+				if(!response.result) {
+					show_success_message(response);
+				} else {
+					show_success_message(response);
+					$form.resetForm();
+				}
+			}
+		});
+		return false;
+	});
+
+	$('#js-logout').click( function() {
+		$.ajax({
+			url: '/form/',
+			data: { handler: 'Authorization', command: 'logout' },
+			dataType: 'json',
+			success: function(response) {
+				if(!response.result) {
+					alert(response.message);
+				} else {
+					window.location.href = '/';
+				}
+			}
+		});
+		return false;
+	});
+});

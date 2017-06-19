@@ -1,0 +1,23 @@
+include helpers/bemto
+include helpers/variables
+include helpers/mixins
+
+-bemto_settings_prefix = 'b-'
+
+doctype html
+html
+	head
+		title calculator
+		include inc/head
+	body(class="p-calculator")
+		
+		.b-common-wrap
+			+b('section').calculator
+				.b-container
+					+e('').table-wrap
+						+e('').left
+						+e('').right
+
+
+		include inc/vendor-scripts
+		script(src="js/client.min.js")

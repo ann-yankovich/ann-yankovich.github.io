@@ -1,0 +1,57 @@
+include helpers/bemto
+include helpers/variables
+include helpers/mixins
+
+-bemto_settings_prefix = 'b-'
+
+doctype html
+html
+	head
+		title first-screen
+		include inc/head
+	body(class="p-first-screen")
+		
+		.b-common-wrap
+			+b('header').header.first-screen
+				.b-container
+					+e('').top
+						+e('').wrap
+							+e('').left
+								+b('nav').nav
+									+e('a')(href='#').item О компании
+									+e('a')(href='#').item Услуги
+									+e('a')(href='#').item_active Портфолио
+									+e('a')(href='#').item Цены
+									+e('a')(href='#').item Статьи
+									+e('a')(href='#').item Контакты
+							+e('').right
+								+b('span').phone (812) 936 16 65 
+						+b('a').button_callback Обратный звонок
+					+e('').table-wrap
+						+e('').left-cell
+							+e('').text Строительство и проектирование фундаментов для жилых, административных и промышленных зданий в Санкт-Петербурге, Лен. области и других регионах РФ. 
+						+e('').right-cell
+							+e('').title-wrap
+								+e('span').title-2 Надежная основа
+					+e('').table-wrap
+						+e('').left-cell
+							+e('').text Обеспечиваем стабильно высокое качество работ с 2007 года. 
+						+e('').right-cell
+							+e('').wrap-caption
+								+e('span').caption Успешного будущего
+			+b('footer').footer.first-screen
+				+e('').logo
+					+e('img')(src='img/logo-footer.png')
+				.b-container
+					+e('').table-wrap
+						+e('').left
+							+e('').copy
+								+e('').left-copyright
+									+e('span').pointer-ico
+								+e('').right-copyright
+									+e('').address Санкт-Петербург, пр-т Александровской фермы 29, лит. ВГ, оф. 2С-14
+									+e('a')(href='#').link Посмотреть на карте
+
+
+		include inc/vendor-scripts
+		script(src="js/client.min.js")

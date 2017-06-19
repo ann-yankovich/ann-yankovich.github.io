@@ -1,0 +1,66 @@
+include helpers/bemto
+include helpers/variables
+include helpers/mixins
+
+-bemto_settings_prefix = 'b-'
+
+doctype html
+html
+	head
+		title portfolio-item
+		include inc/head
+	body(class="p-portfolio-item")
+		
+		.b-common-wrap
+			+b('section').portfolio-item
+				+e('').left
+					+b('').portfolio-slider-wrap
+						+b('').portfolio-slider.owl-carousel
+							+e('').item
+								+e('img')(src='img/portfolio-item-slide-img.jpg')
+							+e('').item
+								+e('img')(src='img/portfolio-item-slide-img.jpg')
+							+e('').item
+								+e('img')(src='img/portfolio-item-slide-img.jpg')
+							+e('').item
+								+e('img')(src='img/portfolio-item-slide-img.jpg')
+							+e('').item
+								+e('img')(src='img/portfolio-item-slide-img.jpg')
+							+e('').item
+								+e('img')(src='img/portfolio-item-slide-img.jpg')
+							+e('').item
+								+e('img')(src='img/portfolio-item-slide-img.jpg')
+						+b('span').counter
+				+e('').right
+					+b('').back 
+						+e('a').link Назад к работам
+					+e('').wrap
+						+e('span').title-2 Ленточный фундамент + погреб + полы по грунту
+						+e('').address Ленинградская область, г. Волхов
+					+e('').wrap-cost
+						+e('').cell
+							+e('').wrap
+								+e('').price 880 000 руб.
+								+e('').days 20 дней
+					+e('').wrap
+						+e('h4') будущее строение:
+						+e('p').text Деревянный 1,5 этажный дом (с мансардой) из оцилиндрованного бруса Д26, крыша из мягкой кровли, перекрытия деревянные.
+						+e('h4') геология:
+						+e('p').text Растительный слой 30 см, далее пески пылеватые, средней плотности, слабовлажные до отметки 170см, далее пески пылеватые плотные. Уровень грунтовых вод на отметке 3,5 м.
+						+e('h4') геодезия:
+						+e('p').text Перепад высот в пятне застройки 60 см - прямой равномерный уклон.
+						+e('h4') состояние объекта:
+						+e('p').text Открытая площадка, отсутствие воды, электричества, бытовки, охрны, грунтовая дорога.
+						+e('h4') адрес объекта:
+						+e('p').text Ленинградская область, Волховский район
+						+e('h4') пожелание заказчика:
+						+e('p').text Надежный фундамент под дом, наличие погреба для хранения овощей, солений и пр. продуктов, поднять дом на высоту въезда на участок (60 см от грунта в высокой точке), создать готовое основание для устройства чистого полаЮ сжатые сроки.
+						+e('h4') Итоговая конфигурация фундамента:
+						+e('p').text Ленточный фундамент мелкого заложения (h=1150), погреб монолитный 2000х3000х3000 мм (с перекрытием), пол монолитная армированная плита по песчаной подушке толщиной 150 мм. Также для защиты бетона от влаги сделана обмазочная гидроизоляция, для повышения комфорта проживания в дома сделано утепление цоколя.
+
+
+
+
+		include partials/footer
+		include inc/vendor-scripts
+		script(src="js/client.min.js")

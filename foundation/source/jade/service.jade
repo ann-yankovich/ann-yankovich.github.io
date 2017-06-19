@@ -1,0 +1,85 @@
+include helpers/bemto
+include helpers/variables
+include helpers/mixins
+
+-bemto_settings_prefix = 'b-'
+
+doctype html
+html
+	head
+		title service
+		include inc/head
+	body(class="p-service")
+		
+		.b-common-wrap
+			+b('section').services
+				+e('').left
+				+e('').right
+					+b('').back 
+						+e('a').link Назад к услугам
+					+e('').wrap
+						+e('').section Устройство коробки дома
+						+b('span').title-1 Газобетон (H1)
+						+e('p') Газобетон – это легкий и теплый материал, предназначенный для строительства частных особняков, домов и дач. Его особенность &ndash; в пористой структуре, которая и определяет его основные параметры.
+						+e('p') Он экологически безопасен и позволяет создать внутри строения комфортный для проживания микроклимат. Сегодня дома из газосиликатных блоков не менее популярны, чем кирпичные. Узнать о достоинствах домов из газобетона вам помогут отзывы владелцев домов, построенных из этого материала.
+						+e('p') Газобетон – легкий и прочный строительный материал, который имеет пористую структуру. При строительстве можно обойтись без грузоподъемной техники. За счёт большого размера блоков здания строятся очень быстро и с минимальными трудозатратами.
+						+e('p') При изготовления газобетонных блоков очень точно выдерживаются размеры, они имеют правильную форму и ровные края. Материал легко поддается любой обработке. Его можно резать, пилить, придавая нужную форму и размер.
+						+b('').images
+							+e('img')(src='img/image.jpg')
+							+e('img')(src='img/image.jpg')
+						+e('p') Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.
+						+e('p') В результате сгенерированный Lorem Ipsum выглядит правдоподобно, не имеет повторяющихся абзацей или "невозможных"  слов.
+						+b('span').title-2 Заголовок H2
+						+e('p') Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.
+						+b('span').title-3 Заголовок H3
+						+e('p') Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.
+						+e('ul')
+							+e('li') Классический текст Lorem Ipsum, используемый с XVI века, привед
+							+e('li') Также даны разделы 1.10.32 и 1.10.33 "de Finibus Bonorum et Malorum" Цицериона и их английский перевод
+							+e('li') Давно выяснено, что при оценке дизайна и композиции читаемый текст мешает сосредоточиться.
+						+e('p') Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting
+					+e('').bottom
+						+e('').wrap
+							+e('').caption Портфолио домов из газобетона
+							+b('section').portfolio_slider.services-slider.owl-carousel
+								+e('').item-wrap
+									+e('a')(href='#').item
+										+e('img')(src='img/portfolio-img.jpg')
+										+e('').show Смотреть работу
+										+e('').text
+											+e('').title ленточный фундамент +  погреб + полы по грунту
+											+e('').address Ленинградская обл., г. Волхов
+								+e('').item-wrap
+									+e('a')(href='#').item
+										+e('img')(src='img/portfolio-img.jpg')
+										+e('').show Смотреть работу
+										+e('').text
+											+e('').title ленточный фундамент +  погреб + полы по грунту
+											+e('').address Ленинградская обл., г. Волхов
+								+e('').item-wrap
+									+e('a')(href='#').item
+										+e('img')(src='img/portfolio-img.jpg')
+										+e('').show Смотреть работу
+										+e('').text
+											+e('').title ленточный фундамент +  погреб + полы по грунту
+											+e('').address Ленинградская обл., г. Волхов
+								+e('').item-wrap
+									+e('a')(href='#').item
+										+e('img')(src='img/portfolio-img.jpg')
+										+e('').show Смотреть работу
+										+e('').text
+											+e('').title ленточный фундамент +  погреб + полы по грунту
+											+e('').address Ленинградская обл., г. Волхов
+								+e('').item-wrap
+									+e('a')(href='#').item
+										+e('img')(src='img/portfolio-img.jpg')
+										+e('').show Смотреть работу
+										+e('').text
+											+e('').title ленточный фундамент +  погреб + полы по грунту
+											+e('').address Ленинградская обл., г. Волхов
+							+b('a')(href='#').button_go Перейти в портфолио
+
+
+		include partials/footer
+		include inc/vendor-scripts
+		script(src="js/client.min.js")

@@ -1,0 +1,26 @@
+include helpers/bemto
+include helpers/variables
+include helpers/mixins
+
+-bemto_settings_prefix = 'b-'
+
+doctype html
+html
+	head
+		title text
+		include inc/head
+	body(class="p-text")
+
+		#fullpage
+		
+			.section
+				p Slide 1
+			.section
+				p Slide 2
+			.section
+				p Slide 3
+			.section
+				p Slide 4
+
+		include inc/vendor-scripts
+		script(src="js/client.min.js")

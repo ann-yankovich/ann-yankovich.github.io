@@ -1,0 +1,72 @@
+include helpers/bemto
+include helpers/variables
+include helpers/mixins
+
+-bemto_settings_prefix = 'b-'
+
+doctype html
+html
+	head
+		title contacts
+		include inc/head
+	body(class="p-contacts")
+		
+		.b-common-wrap
+			+b('header').header
+				.b-container
+					+e('').top
+						+e('').wrap
+							+e('').left
+								+b('span').logo
+									+e('img')(src='img/logo.png')
+								+b('nav').nav
+									+e('a')(href='#').item О компании
+									+e('a')(href='#').item Услуги
+									+e('a')(href='#').item_active Портфолио
+									+e('a')(href='#').item Цены
+									+e('a')(href='#').item Статьи
+									+e('a')(href='#').item Контакты
+							+e('').right
+								+b('span').phone (812) 936 16 65 
+						+b('a').button_callback Обратный звонок
+					+e('span').title Контакты
+					+e('').text
+						p Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book.
+			.b-container
+				+b('section').contacts-wrap
+					+e('').contacts
+						+e('span').title-top Контактная информация
+						+e('').item
+							+e('').caption Адрес:
+							+e('').title с.-петербург, пр-т александровской фермы 29, лит. вг,  оф. 2с-14
+							+e('a').link Показать на карте
+						+e('').item
+							+e('').caption Контактный телефон:
+							+e('').title (812) 936-16-65
+						+e('').item
+							+e('').caption Электронная почта:
+							+e('').title zakaz@fundament-spb.ru
+							+e('a').link Напишите нам
+						+e('').item
+							+e('').caption Режим работы:
+							+e('').title пн-сб 09.00-19.00
+					+e('form').callback
+						+e('span').title-top Заказать обратный звонок
+						+e('').inputs-wrap
+							+e('').wrap
+								+e('').caption Ваше имя:
+								+b('input')(type='text' placeholder='Введите ваше имя').input
+							+e('').wrap
+								+e('').caption Ваш телефон:
+								+b('input')(type='text' placeholder='Введите ваш телефон').input
+						+e('').caption Комментарии к заявке:
+						+b('textarea')(rows='8' placeholder='Комментарии к заявке').input_textarea
+						+e('').clear-fix
+							+e('').submit-wrap
+								+b('input')(type='submit' value='отправить заявку').button_send
+			+b('').map
+
+
+		include partials/footer
+		include inc/vendor-scripts
+		script(src="js/client.min.js")

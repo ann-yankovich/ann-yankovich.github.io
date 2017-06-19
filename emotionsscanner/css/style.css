@@ -1,0 +1,584 @@
+@font-face {
+    font-family: 'OpenSans-Bold';
+    src: url('../fonts/OpenSans-Bold.eot');
+    src: url('../fonts/OpenSans-Bold.eot?#iefix') format('embedded-opentype'), url('../fonts/OpenSans-Bold.woff') format('woff'), url('../fonts/OpenSans-Bold.ttf') format('truetype'), url('../fonts/OpenSans-Bold.svg#OpenSans-Bold') format('svg');
+    font-weight: bold;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'OpenSans-Regular';
+    src: url('../fonts/OpenSans-Regular.eot');
+    src: url('../fonts/OpenSans-Regular.eot?#iefix') format('embedded-opentype'), url('../fonts/OpenSans-Regular.woff') format('woff'), url('../fonts/OpenSans-Regular.ttf') format('truetype'), url('../fonts/OpenSans-Regular.svg#OpenSans-Regular') format('svg');
+    font-weight: normal;
+    font-style: normal;
+}
+
+html {
+    height: 100%;
+    font-size: 10px;
+}
+
+body {
+    position: relative;
+    font-family: 'OpenSans-Regular';
+    font-size: 100%;
+    width: 100%;
+    background-image: url("../img/back/bungeeBlur.jpg"), url("../img/back/aeronauticBlur.jpg"), url("../img/back/comodoBlur.jpg"), url("../img/back/divingBlur.jpg"), url("../img/back/insectsBlur.jpg"), url("../img/back/quokkasBlur.jpg"), url("../img/back/surfingBlur.jpg"), url("../img/back/whaleBlur.jpg");
+    background-attachment: fixed;
+    background-repeat: no-repeat;
+    background-position: top center;
+    color: #fff;
+    letter-spacing: -0.5px;
+    min-height: 100%;
+}
+
+    body .scaning-result-header, 
+    body .scaning-result-footer, 
+    body .resent-scans, 
+    body .scan-result, 
+    body .first-screen-header, 
+    body .photo-upload,
+    body .registration-form {
+        display: none;
+    }
+    
+    body.first-screen {
+        animation-name: slider;
+        animation-duration: 35s;
+        animation-delay: 5s;
+        animation-iteration-count: infinite;
+    }
+
+        body.first-screen .resent-scans, body.first-screen .first-screen-header, body.first-screen .photo-upload {
+            display: block;
+        }
+
+    body.second-screen .scaning-result-header, body.second-screen .scaning-result-footer, body.second-screen .scan-result {
+        display: block;
+    }
+
+        body.second-screen.aeronautic {
+            background-image: url("../img/back/aeronautic.jpg");
+        }
+
+        body.second-screen.whale-watching {
+            background-image: url("../img/back/whale.jpg");
+        }
+
+        body.second-screen.surfing {
+            background-image: url("../img/back/surfing.jpg");
+        }
+
+        body.second-screen.comodo {
+            background-image: url("../img/back/comodo.jpg");
+        }
+
+        body.second-screen.insects {
+            background-image: url("../img/back/insects.jpg");
+        }
+
+        body.second-screen.quokkas {
+            background-image: url("../img/back/quokkas.jpg");
+        }
+
+        body.second-screen.bungee-jumping {
+            background-image: url("../img/back/bungee.jpg");
+        }
+
+        body.second-screen.diving {
+            background-image: url("../img/back/diving.jpg");
+        }
+        
+
+        body.third-screen:before {
+            content: '';
+            position: absolute;
+            top: 0;
+            right: 0;
+            bottom: 0;
+            left: 0;
+            width: 100%;
+            background-color: rgba(0, 0, 0, .8);
+        }
+
+        body.third-screen .registration-form {
+            display: block;
+        }
+
+        body.third-screen header,
+        body.third-screen .bottom-block {
+            position: absolute;
+            width: 100%;
+            z-index: -1;
+            box-sizing: border-box;
+        }
+        body.third-screen header {
+            top: 0;
+        }
+        body.third-screen .bottom-block {
+            bottom: 0;
+            min-height: 530px;
+        }
+
+        body.third-screen .bottom-block .logo{
+            display: none;
+        }
+
+.container {
+    max-width: 1170px;
+    margin: 0 auto;
+}
+
+header,
+.bottom-block {
+    text-align: center;
+    white-space: nowrap;
+}
+
+    header:before,
+    .bottom-block:before {
+        content: '';
+        height: 100%;
+        display: inline-block;
+        vertical-align: middle;
+    }
+
+    header .container, 
+    .bottom-block .container {
+        display: inline-block;
+        vertical-align: middle;
+        white-space: initial;
+    }
+
+header {
+    height: 239px;
+    padding: 0 10px 20px;
+    background: url(../img/backTop.png) center bottom no-repeat;
+    -webkit-background-size: cover;
+    background-size: cover;
+}
+
+
+.columns {
+    display: -webkit-flex;
+    display: -ms-flex;
+    display: flex;
+    justify-content: center;
+}
+.columns-wrap {
+    flex-wrap: wrap;
+}
+.columns .col {
+    flex: 1 0 auto;
+}
+
+.bottom-block {
+    min-height: 650px;
+    background: url(../img/backBottom.png) center top no-repeat, linear-gradient(to bottom, rgba(0,0,0,0) 250px, #3d5563 250px);
+}
+
+    .bottom-block .logo {
+        display: block;
+        margin: 0 auto 15px;
+    }
+
+    .bottom-block .page-description {
+        margin-bottom: 40px;
+    }
+
+.page-title {
+    font-family: 'OpenSans-Bold';
+    font-size: 5.2rem;
+    margin-bottom: 10px;
+    line-height: 6.5rem;
+}
+
+.page-description {
+    font-size: 2.4rem;
+    line-height: 3.4rem;
+}
+
+.photo-upload {
+    font-size: 0;
+    padding: 35px 0 50px;
+    text-align: center;
+}
+
+.photo-upload .container {
+    max-width: 890px;
+}
+
+    .photo-upload .icon {
+        position: relative;
+        display: block;
+        width: 180px;
+        height: 180px;
+        margin: 0 auto 3rem;
+        background-color: #d0d0d0;
+        border: 5px solid #fff;
+        border-radius: 50%;
+        transition: all 0.3s ease;
+    }
+
+        .photo-upload .icon:after {
+            content: '';
+            display: block;
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            height: 99px;
+            margin-top: -50px;
+            transition: all 0.3s ease;
+        }
+
+            .photo-upload .icon.facebook:after {
+                width: 53px;
+                margin-left: -27px;
+                background-image: url(../img/fb.png);
+            }
+
+            .photo-upload .icon.library:after {
+                width: 98px;
+                margin-left: -49px;
+                background-image: url(../img/lb.png);
+            }
+
+.resent-scans {
+    padding-top: 60px;
+}
+
+    .resent-scans .block-title {
+        font-family: 'OpenSans-Bold';
+        font-size: 3.6rem;
+        text-align: center;
+    }
+    
+    .resent-scans .scan-item {
+        max-width: 265px;
+    }
+
+.scans-list {
+    font-size: 0;
+    margin: 0 -15px 55px;
+}
+
+.scan-item {
+    padding: 0 15px;
+}
+
+    .scan-item .scan-img {
+        position: relative;
+        bottom: -30px;
+        max-width: 100%;
+        border-radius: 6px;
+    }
+
+    .scan-item .scan-info {
+        font-size: 14px;
+        position: relative;
+        margin: 0 10px;
+        padding: 50px 15px 10px;
+        background-color: #fff;
+        border-radius: 6px;
+        color: #323232;
+        text-align: center;
+    }
+
+    .scan-item .user-photo {
+        position: absolute;
+        left: 50%;
+        top: 0;
+        width: 80px;
+        height: 80px;
+        border: 3px solid #fff;
+        border-radius: 50%;
+        box-sizing: border-box;
+        transform: translate(-50%, -50%);
+    }
+
+    .scan-item .activity {
+        font-family: 'OpenSans-Bold';
+        font-size: 18px;
+        margin-bottom: 7px;
+    }
+
+    .scan-item .location {
+        margin-bottom: 20px;
+        color: #808080;
+    }
+
+    .scan-item.big {
+        width: 400px;
+        margin: 0 auto;
+        padding: 0;
+    }
+
+        .scan-item.big .user-photo {
+            width: 122px;
+            height: 122px;
+            border-width: 5px;
+        }
+
+        .scan-item.big .activity {
+            font-size: 2.6rem;
+            margin-bottom: 22px;
+        }
+
+        .scan-item.big .scan-info {
+            padding: 80px 30px 45px;
+        }
+
+        .scan-item.big .emotions-list {
+            margin-bottom: 35px;
+        }
+
+        .scan-item.big .emotions-item {
+            font-size: 1.8rem;
+            margin-bottom: 25px;
+        }
+
+        .scan-item.big .progress-bar {
+            height: 5px;
+            margin-top: 5px;
+        }
+
+.emotions-list {
+    text-align: left;
+}
+
+    .emotions-list .emotions-item {
+        margin-bottom: 15px;
+    }
+
+    .emotions-list .percent {
+        float: right;
+    }
+    .emotions-list .progress-bar {
+        position: relative;
+        height: 4px;
+        margin-top: 3px;
+        background-color: #ccc;
+        border-radius: 2px;
+        overflow: hidden;
+    }
+
+    .emotions-list .progress {
+        position: absolute;
+        display: block;
+        left: 0;
+        width: 0;
+        height: 100%;
+    }
+
+        .emotions-list .happiness .progress {
+            background-color: #fd6721;
+        }
+
+        .emotions-list .curiosity .progress {
+            background-color: #8678f1;
+        }
+
+        .emotions-list .boredom .progress {
+            background-color: #43b272;
+        }
+
+.scan-result {
+    margin: 11rem auto -14.5rem;
+    text-align: center;
+}
+
+.scaning-result-footer {
+    padding: 205px 15px 0;
+}
+
+    .scaning-result-footer .btn {
+        margin: 1.5rem 0 10rem;
+    }
+
+@keyframes slider {
+    0% {
+        background-image: url("../img/back/bungeeBlur.jpg")
+    }
+    12.5% {
+        background-image: url("../img/back/aeronauticBlur.jpg")
+    }
+    25% {
+        background-image: url("../img/back/comodoBlur.jpg")
+    }
+    37.5% {
+        background-image: url("../img/back/divingBlur.jpg")
+    }
+    50% {
+        background-image: url("../img/back/insectsBlur.jpg")
+    }
+    62.5% {
+        background-image: url("../img/back/quokkasBlur.jpg")
+    }
+    75% {
+        background-image: url("../img/back/surfingBlur.jpg")
+    }
+    87.5% {
+        background-image: url("../img/back/whaleBlur.jpg")
+    }
+    100% {
+        background-image: url("../img/back/bungeeBlur.jpg")
+    }
+}
+
+@media only screen and (max-width: 768px) {
+    
+    html {
+        font-size: 7.8px;
+    }
+    
+    .photo-upload .btn {
+        width: 150px;
+        padding: 10px 0;
+    }
+    
+    .photo-upload .btn span {
+        display: block;
+    }
+    
+    .photo-upload .icon {
+        width: 126px;
+        height: 126px;
+    }
+    .photo-upload .icon:after {
+        transform: scale(0.7);
+    }
+
+    .scans-list {
+        margin-bottom: 35px;
+    }
+
+    .scan-item.big {
+        width: 315px;
+    }
+    
+    .scaning-result-footer {
+        padding-top: 170px;
+    }
+    
+    .logo {
+        transform: scale(0.85);
+    }
+
+}
+
+@media only screen and (max-width: 320px) {
+    
+    html {
+        font-size: 10px;
+    }
+    
+    body {
+        letter-spacing: 0.1px;
+        background-position: center 150px;
+        background-size: auto 330px;
+    }
+        body.third-screen header {
+            height: 239px;
+        }
+    header {
+        height: 170px;
+        background-image: url(../img/backTopSmall.png);
+    }
+    
+    .page-title {
+        font-size: 2.6rem;
+        line-height: 3.2rem;
+    }
+    
+    .page-description {
+        font-size: 1.6rem;
+        line-height: 2rem;
+    }
+        .page-title span,
+        .page-description span {
+            display: block;
+        }
+
+    .bottom-block {
+        background: url(../img/backBottomSmall.png) center top no-repeat, linear-gradient(to bottom, rgba(0,0,0,0) 50px, #3d5563 50px);
+    }
+        .bottom-block:before {
+            display: none;
+        }
+        .bottom-block .page-description {
+            margin-bottom: 14px;
+        }
+    .photo-upload {
+        padding: 20px 0 30px;
+    }
+
+    .photo-upload .icon {
+        width: 90px;
+        height: 90px;
+        margin-bottom: 1rem;
+        border-width: 3px;
+    }
+        .photo-upload .icon:after {
+            transform: scale(0.5);
+        }
+
+    .photo-upload .btn {
+        font-size: 1.6rem;
+        width: 146px;
+        padding: 5px 0;
+    }
+    
+    .resent-scans {
+        padding-top: 30px;
+    }
+    
+    .resent-scans .block-title {
+        font-size: 2rem;
+        margin-bottom: -10px;
+    }
+
+    .scans-list {
+        margin-bottom: 25px;
+    }
+    
+    .scan-result {
+        margin-top: 9rem;
+    }
+        .scan-result .btn {
+            font-size: 1.8rem;
+        }
+
+    .scaning-result-footer .btn {
+        font-size: 1.8rem;
+        margin: 1.5rem 0 3.5rem;
+    }
+    
+    .scan-item.big {
+        width: 298px;
+    }    
+        .scan-item.big .user-photo {
+            width: 90px;
+            height: 90px;
+        }
+        .scan-item.big .scan-info{
+            padding: 60px 15px 25px;
+        }
+        .scan-item.big .activity {
+            font-size: 2rem;
+            margin-bottom: 20px;
+        }
+        .scan-item.big .emotions-item {
+            font-size: 1.6rem;
+            margin-bottom: 15px;
+        }
+    
+    .emotions-list {
+        margin-bottom: 25px;
+    }
+    
+    .logo {
+        transform: scale(0.7);
+    }
+
+}

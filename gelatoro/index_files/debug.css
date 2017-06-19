@@ -1,0 +1,108 @@
+html {
+    user-select: auto;
+}
+p.error {
+    position: absolute;
+    top: 0px;
+    right: 5px;
+    color: red;
+    font-size: .875rem;
+    line-height: 2rem;
+}
+
+.b-popup-feedback p.error {
+    left: 30px;
+    right: auto;
+    top: 15px;
+}
+
+.b-popup-order p.error {
+    left: 5px;
+    top: 85px;
+}
+
+.b-popup-callback p.error {
+    left: 125px;
+    right: 285px;
+    top: 75px;
+}
+
+._rel {
+    position: relative;
+}
+
+input.error, textarea.error {
+    border: 1px solid red
+}
+
+.b-popup-feedback._success {
+    height: auto;
+}
+
+.b-popup-feedback._success::before {
+    display: none;
+}
+
+.gm-style-iw>div {
+    min-width: 100px;
+}
+
+.p {
+    font-family: 'CENTURY Gothic'
+}
+
+.b-brand__right * {
+    font-size: .975rem;
+}
+
+.b-brand__big-title {
+    font-size: 2em;
+}
+
+.b-portions__text {
+    font-size: .975rem;
+}
+
+.b-map-wrapper__text, .pink-text {
+    font-size: .975rem;
+}
+
+.gold-text {
+    font-size: 16px;
+}
+
+
+.b-data__bot-input {
+	display: inline-block;
+	width: 257px;
+	float: left;
+	margin-right: 10px;
+}
+.b-data__bot-input:first-child {
+	width: 297px;
+}
+.b-table-ice._additionals {
+	margin-top: 20px;
+	padding-top: 20px;
+	background: url(../img/advantages-bg.png) center top no-repeat;
+}
+.b-select-wrap__item {
+    width:203px;
+}
+
+
+.b-report {
+    padding-bottom: 57px;
+}
+.b-ice-submit {
+    text-align: right;
+    padding-top: 15px;
+    position: relative;
+}
+.b-ice-submit p.error {
+    top: 51px;
+    right: 228px;
+}
+.b-current-date {
+    margin-left: 15px;
+}

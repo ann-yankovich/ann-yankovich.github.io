@@ -2,7 +2,7 @@
 <html>
     <head>
         <meta charset="utf-8">
-        <title>список работ</title>
+        <title>SOLID</title>
         <style>
             body {
                 font-family: trebuchet ms,sans-serif;
@@ -25,30 +25,139 @@
                 color: #000;
                 text-decoration: none;
             }
+            p {
+                margin: 0 0 5px;
+            }
+            pre {
+                display: block;
+                margin: 0 0 8px;
+                border: 1px solid #eee;
+                font-size: 14px;
+            }
         </style>
     </head>
     <body>
         <h2>TripTogether</h2>
         <ul>
-            <li><a target="_blank" href="https://www.triptogether.com/travellers/#!/locations/taiwan">экран локации</a></li>
-            <li><a target="_blank" href="">формы покупки</a></li>
-            <li><a target="_blank" href="emotionsscanner/index.html">лендинг</a></li>
-            <li><a target="_blank" href="https://ann-yankovich.github.io/build/main">тестовое</a></li>
-        </ul>
-        <h2>другое</h2>
-        <ul>
-            <li><a target="_blank" href="https://github.com/ann-yankovich/priority-queue">тестовое в RollingScopes (EPAM)</a></li>
-            <li><a target="_blank" href="foundation/build/main.html">анимации, скролл</a></li>
-            <li><a target="_blank" href="http://karcher-cleaning.by/">скролл по клику в верхнем меню, выделение нужного пункта меню, анимация оборудования при скорлле </a></li>
-            <li><a target="_blank" href="http://carex.by/auctions/771">таймеры, график ставок</a>, <a target="_blank" href="http://carex.by/">карусель "о нас"</a></li>
-            <li><a target="_blank" href="https://modusline.by/partners.html ">блок наши партнеры (верстка + яндекс карта)</a></li>
-            <li><a target="_blank" href="http://linedoor.by/">логика каталога (карусели, переходы из коллекция -> модельный ряд -> модель, смена цветов, размеров, цен) </a>, <br>
-                <a target="_blank" href="http://linedoor.by/#statistics">изменение счетчиков по скроллу</a> </li>
-            <li><a target="_blank" href="http://extraservice.by/">параллакс на первом экране </a></li>
-            <!-- <li><a target="_blank" href="">http://orders.expressbus.by/</a></li> -->
-            <li><a target="_blank" href="/gelatoro/index.html">личный кабинет продавцов</a></li>
-            <!-- <li><a target="_blank" href="http://falvar.com/catalog/room/nomer-komnata4.html">бронирование номера+datepicker</a></li> -->
-            <li><a target="_blank" href="http://ex-company.by/">верстка</a></li>
+            <li>
+                <p>The <b>S</b>ingle Responsibility Principle</p>
+
+                <p>
+                    <i>Bad example:</i>
+                </p>
+    <pre>
+
+    class <b>User</b> {
+        setName() {
+            this.name = name;
+            alert(this.name);
+        }
+    }
+
+    </pre>
+                <p>
+                    <i>Good example:</i>
+                </p>
+<pre>
+
+    class <b>User</b> {
+        setName(name) {
+            this.name = name;
+        }
+        showName() {
+            alert(this.name);
+        }
+    }
+
+</pre>
+            </li>
+            <li>
+                <p>The <b>O</b>pen Closed Principle</p>
+
+                <p>
+                    <i>Bad example:</i>
+                </p>
+                <pre>
+
+    class <b>User</b> {
+        setName(firstName, lastName) {
+            this.name = `${firstName} ${lastName}`;
+        }
+        showName() {
+            alert(this.name);
+        }
+    }
+
+    </pre>
+                <p>
+                    <i>Good example:</i>
+                </p>
+                <pre>
+
+    class <b>User</b> {
+        setName(name) {
+            this.name = name;
+        }
+        setFullName(firstName, lastName) {
+            this.fullName = `${firstName} ${lastName}`;
+        }
+        showName() {
+            alert(this.name);
+        }
+    }
+
+</pre>
+            </li>
+            <li>
+                <p>The <b>L</b>iskov Substitution Principle</p>
+            </li>
+            <li>
+                <p>The <b>I</b>nterface Segregation Principle</p>
+
+                <p>
+                    <i>Bad example:</i>
+                </p>
+                <pre>
+
+    class <b>User</b> {
+        setName(name) {
+            this.name = name;
+        }
+        setFullName(firstName, lastName) {
+            this.fullName = `${firstName} ${lastName}`;
+        }
+        showName() {
+            alert(this.name);
+        }
+    }
+
+    </pre>
+                <p>
+                    <i>Good example:</i>
+                </p>
+                <pre>
+
+    class <b>setUserData</b> {
+        setName(name) {
+            this.name = name;
+        }
+        setFullName(firstName, lastName) {
+            this.fullName = `${firstName} ${lastName}`;
+        }
+    }
+
+    class <b>showUserData</b> {
+        showName() {
+            alert(this.name);
+        }
+    }
+
+</pre>
+
+            </li>
+            <li>
+                <p>The <b>D</b>ependency Inversion Principle</p>
+            </li>
         </ul>
     </body>
 </html>
